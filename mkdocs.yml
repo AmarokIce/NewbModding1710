@@ -22,9 +22,9 @@ nav:
     - 工具、武器与材质: item/ToolAndWeapon.md
     - 防具            : item/Armors.md
     - 元数据区分的物品: item/MetaItem.md
-  # - 方块:
-  #   - 第一个方块: block/FirstBlock.md
-  #   - 方块交互: block/BlockSpeaker.md
+  - 方块:
+    - 第一个方块: block/FirstBlock.md
+    - 方块朝向: block/BlockFacing.md
   # - 方块实体:
   #   - 方块与方块实体: block/TileBlock.md
   #   - NBT, 数据存储器: block/NBT.md
