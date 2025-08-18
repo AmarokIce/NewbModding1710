@@ -1,9 +1,16 @@
-package club.snowlyicewolf.example.mod;
+package club.snowlyicewolf.modding1710;
 
+import club.snowlyicewolf.modding1710.init.InitItems;
+import club.snowlyicewolf.modding1710.proxy.IProxy;
+import club.snowlyicewolf.modding1710.util.BeanCreativeTab;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.creativetab.CreativeTabs;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 // 可以打开这个注解的详细类，Forge 设有详细的文档。
 @Mod(
@@ -23,30 +30,45 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
         // 模组关系，例如：{@code required-after:mymod;} 意思为依赖 mymod 且处于之后加载。如果去掉 required-，则是仅滞后。
         dependencies = ""
 )
-public class ModMain {
-    public static final String ID = "example_mod";
+public final class ModMain {
+    public static final String ID = "examplemod";
     public static final String NAME = "Example Mod";
     public static final String VERSION = "0.0.1";
+    public static final Logger LOGGER = LogManager.getLogger(NAME);
+
+    public static final CreativeTabs TAB = new BeanCreativeTab("example_item_group", () -> InitItems.ITEM_EXAMPLE);
 
     // 魔法设置主类实例。
     @Mod.Instance(ModMain.ID)
     public static ModMain instance;
 
-    // @Proxy
-
+    @SidedProxy(
+        serverSide = "club.snowlyicewolf.modding1710.proxy.ServerProxy",
+        clientSide = "club.snowlyicewolf.modding1710.proxy.ClientProxy",
+        modId = ModMain.ID
+    )
+    public static IProxy proxy;
 
     // 初始化加载，通常我们在这完成大部分注册，包括配置文件。
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        proxy.preInit();
+        InitItems.init();
     }
 
     // 标准加载，这是你最后注册的机会。通常处理一些标准流程和注册过之后要做的事情。
     @Mod.EventHandler
-    public void init(FMLInitializationEvent event) {}
+    public void init(FMLInitializationEvent event) {
+        proxy.init();
+    }
 
     // 通讯加载，这里用于与其他模组使用封包交流，这是一种灵活的联动方式，例如 Waila 就是采用这种方式与其他模组交流。
     // 请不要在这里注册事件与封包之外的东西，除非你是个 🦀。
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {}
+
+    @Mod.InstanceFactory
+    public static ModMain instance() {
+        return new ModMain();
+    }
 }
