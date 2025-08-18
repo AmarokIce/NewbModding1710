@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "minVersion": "0.7.11",
+  "package": "club.snowlyicewolf.example.mod.mixin",
+  "refmap": "${mixin_refmap}",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ExampleModMixin"
+  ]
+}
