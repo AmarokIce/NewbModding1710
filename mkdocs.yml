@@ -1,0 +1,115 @@
+site_name: NewbModding1710 - Minecraft Mod 1.7.10 开发教学
+site_author: 'AmarokIce'
+site_description: '狼在凤梨田里编写的 1.7.10 开发教学'
+copyright: Copyright © 2019-2025 AmarokIce
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AmarokIce/
+      name: Github
+  generator: false
+
+nav:
+- 入门开发:
+  - 前言与准备: index.md
+  - 部分重要概念: Core.md
+  - 主要类与代理: Mod.md
+  - 物品:
+    - 第一个物品      : item/FirstItem.md
+    - ItemStack       : item/ItemStack.md
+    - 创造模式物品栏  : item/TagGroup.md
+    - 创建一个食物    : item/ItemFood.md
+    - 工具、武器与材质: item/ToolAndWeapon.md
+    - 防具            : item/Armors.md
+    - 元数据区分的物品: item/MetaItem.md
+  # - 方块:
+  #   - 第一个方块: block/FirstBlock.md
+  #   - 方块交互: block/BlockSpeaker.md
+  # - 方块实体:
+  #   - 方块与方块实体: block/TileBlock.md
+  #   - NBT, 数据存储器: block/NBT.md
+  #   - 方块实体的刻实现: block/TileTick.md
+  # - 网络通讯:
+  #   - 数据封包: Proxy/NetWork.md
+  # - GUI:
+  #   - 信号与数据代理: GUI/GUI.md
+  #   - NEI的支持: GUI/NEI.md
+  #   - HUD: GUI/HUD.md
+  # - 药水效果:
+  #   - 药水 ID 反射: Effect/ID.md
+  #   - 药水创建: Effect/Effect.md
+  # - 生物
+  #   - 生物与 AI
+  #   - 生物渲染
+  # - 事件:
+  #   - 发生肾么事了: Event/Event.md
+  #   - 注册独立事件: Event/InitEvent.md
+  #   - 可用事件一览: Event/EventList.md
+  # - 生物群系与结构体:
+  #   - 生物群系: Biome/Biome.md
+  #   - 树与树苗: Biome/Tree.md
+  #   - 结构: Biome/Building.md
+  # - 指令:
+  #   - 服务端上的指令: Command/ServerCommand.md
+  #   - 客户端上的指令: Command/ClientCommand.md
+- 进阶开发:
+  - 准备发车: advanced/index.md
+  # - 渲染OBJ模型:
+  #   - 认识 GL: advanced/obj/OpenGL.md
+  #   - 方块实体渲染器(BlockEntityRenderer): advanced/obj/TileRenderer.md
+  #   - GL11 与资源路径: advanced/obj/ObjRender.md
+  #   - 手持物品的渲染: advanced/obj/ItemObj.md
+# - 凤梨文档:
+#   - 凤梨通灵术: docs/PPc.md
+- 回到凤梨田: https://wolf.snowlyicewolf.club/
+
+theme:
+  name: material
+  logo: assets/ricon.png
+  favicon: assets/ricon.png
+  language: zh
+  features:
+    - header.autohide
+    - navigation.footer
+    - navigation.tabs
+    - content.code.annotate
+    - content.code.copy
+  palette: 
+    - scheme: default
+      toggle:
+        icon: material/weather-night 
+        name: 关闭月亮
+
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 打开月亮
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - search:
+      lang: zh
