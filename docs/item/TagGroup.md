@@ -54,7 +54,6 @@ public class BeanCreativeTab extends CreativeTabs {
 ```java title="ModMain.java"
 public static final CreativeTabs TAB = new BeanCreativeTab("example_item_group", () -> InitItems.ITEM_EXAMPLE);
 ```
-
 现在我们可以为 ItemExample 设定我们刚才设定的组:
 
 ```java title="ItemExample.java"

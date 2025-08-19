@@ -186,10 +186,16 @@ public boolean itemInteractionForEntity(ItemStack pStack, EntityPlayer pPlayer, 
         return false;
     }
 
+    // 在僵尸所在位置生成头颅掉落物。僵尸头颅的元数据为 2。
+    final ItemStack head = new ItemStack(Blocks.skull, 1, 2);
+    final EntityItem itemEntity = new EntityItem(pEntity.worldObj, pEntity.posX, pEntity.posY, pEntity.posZ, head);
+    pEntity.worldObj.spawnEntityInWorld(itemEntity);
+
     // 使僵尸死亡。
     pEntity.setDead();
-    // 在僵尸所在位置掉落僵尸头颅，僵尸头颅的元数据为 2。
-    pEntity.entityDropItem(new ItemStack(Blocks.skull, 1, 2), 0.0f);
+    // 通知实体已经死亡，同步状态。
+    pEntity.worldObj.setEntityState(pEntity, (byte) 3);
+
     // 发出剪刀的声音。
     pEntity.playSound("mob.sheep.shear", 1.0F, 1.0F);
     // 损耗工具
@@ -197,6 +203,23 @@ public boolean itemInteractionForEntity(ItemStack pStack, EntityPlayer pPlayer, 
     return true;
 }
 ```
+
+不过光这样玩家们可能不知道这个东西要怎么用，应此我们来为它增加一个介绍。  
+只需要覆写 `Item#addInformation` 即可。不过由于 Minecraft 被开发出来的时候 Java 并没有泛型，应此此处 `List` 是一个无类型列表。但这不代表我们可以随意加入物品。这里的真实类型是 `String`。不过硬编码不是好习惯，应此我们来 i18n 一下。我们有两种方式处理翻译文本：使用 `I18N`，或者使用 `ChatComponent`。非常推荐后者，这样可以为你的文本方便的增加效果... 其实在文本文件中加入小节符号（也就是 MC 格式符号）也是一样的。  
+此处我们使用 `ChatComponent` 做演示：
+
+```java title="ItemToolExample.java"
+// 参数位分别代表当前物品的 ItemStack（可能是空的）,检查物品的玩家，介绍列表，是否显示高级数据（F3 + H）
+@Override
+public void addInformation(@CheckForNull ItemStack pStack, EntityPlayer pPlayer,
+                           List pTooltipInfos, boolean pFlag) {
+    pTooltipInfos.add(new ChatComponentTranslation("item.exampletool.info")
+        .getFormattedText());
+}
+```
+
+![](../assets/item/ToolAndWeapon_P0.png)
+
 
 ## 章节练习
 
