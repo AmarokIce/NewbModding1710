@@ -658,7 +658,7 @@
   
   
   <span class="md-ellipsis">
-    工具、武器与材质
+    工具与武器
     
   </span>
   
@@ -682,6 +682,29 @@
   
   <span class="md-ellipsis">
     防具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具与防具材质
     
   </span>
   
@@ -979,15 +1002,12 @@
 
 
 <h1 id="item-itemstack">Item 与 ItemStack</h1>
-<p>在<a href="../core.md">重要概念</a>中注册小节中提到过，物品是一个唯一对象。你可能到现在都还没明白什么是唯一对象（或者你都已经忘记它提到过这件事了），不过没关系，这一章节将会向你解释什么是唯一对象，以及关于 ItemStack 相关的事情。</p>
-<p><code>ItemStack</code>，光看这个名字应该就能知道它与物品少不了关系。确实，它与物品的关系就差在了它是个“Stack（堆）”。
-<br /></p>
+<p>在<a href="../core.md">重要概念</a>中注册小节中提到过，物品是一个唯一对象。你可能到现在都还没明白什么是唯一对象（或者你都已经忘记它提到过这件事了），不过没关系，这一章节将会向你解释什么是唯一对象，以及关于 ItemStack 相关的事情。<br />
+<code>ItemStack</code>，光看这个名字应该就能知道它与物品少不了关系。确实，它与物品的关系就差在了它是个“Stack（堆）”。</p>
 <p>来看一个例子：</p>
 <p><img alt="" src="../../assets/item/ItemStack_P0.png" /></p>
-<p>这里看起来有两种物品，一个是我们刚才注册的物品，另一个是苹果。而在游戏数据中，这里有四个 <code>ItemStack</code>。没错，它们或许数量相同，但依然是不同的 <code>ItemStack</code>。在你的背包中，每一个格子都代表着一个 <code>ItemStack</code>，当然，不包括空格子，在 1.7.10 中它们是 <code>null</code>。在扁平化之后的版本的这些空格子才从 <code>null</code> 变成了 <code>EMPTY</code>。不过现在，这些与我们无关。
-<br />
-<code>Item</code> 仅记录一些数据与使用上的约定，它就像是接口，仅负责数据处理，而不负责记录数据。而 <code>ItemStack</code> 就是那个记录数据的对象，包括 NBT，耐久，数量... 而 <code>ItemStack</code> 通常会持有一个 <code>Item</code> 作为标记，这将会让游戏知道这个 <code>ItemStack</code> 是什么物品的堆。
-<br />
+<p>这里看起来有两种物品，一个是我们刚才注册的物品，另一个是苹果。而在游戏数据中，这里有四个 <code>ItemStack</code>。没错，它们或许数量相同，但依然是不同的 <code>ItemStack</code>。在你的背包中，每一个格子都代表着一个 <code>ItemStack</code>，当然，不包括空格子，在 1.7.10 中它们是 <code>null</code>。在扁平化之后的版本的这些空格子才从 <code>null</code> 变成了 <code>EMPTY</code>。不过现在，这些与我们无关。<br />
+<code>Item</code> 仅记录一些数据与使用上的约定，它就像是接口，仅负责数据处理，而不负责记录数据。而 <code>ItemStack</code> 就是那个记录数据的对象，包括 NBT，耐久，数量... 而 <code>ItemStack</code> 通常会持有一个 <code>Item</code> 作为标记，这将会让游戏知道这个 <code>ItemStack</code> 是什么物品的堆。<br />
 既然我们知道了 <code>Item</code> 不负责记录数据，那么为什么说 <code>Item</code> 是唯一对象就不难懂了。即便同一个 <code>Item</code> 类被反复注册，它们也会被视为不同的物品。</p>
 <div class="admonition failure">
 <p class="admonition-title">警惕空指针危机!</p>
@@ -1009,10 +1029,11 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">ItemStack</span><span class="w"> </span><span class="nf">copy</span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">ItemStack</span><span class="w"> </span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">ItemStack</span><span class="w"> </span><span class="n">copy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w">  </span><span class="n">ItemStack</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">getItem</span><span class="p">(),</span><span class="w"> </span><span class="n">stack</span><span class="p">.</span><span class="na">stackSize</span><span class="p">,</span><span class="w"> </span><span class="n">stack</span><span class="p">.</span><span class="na">getItemDamage</span><span class="p">());</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="na">hasTagCompound</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="n">copy</span><span class="p">.</span><span class="na">setTagCompound</span><span class="p">((</span><span class="n">NBTTagCompound</span><span class="p">)</span><span class="w"> </span><span class="n">stack</span><span class="p">.</span><span class="na">getTagCompound</span><span class="p">().</span><span class="na">copy</span><span class="p">());</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">copy</span><span class="p">;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="c1">// 这里一定也要拷贝，因为 NBTTagComponent 也是数据对象！</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">copy</span><span class="p">.</span><span class="na">setTagCompound</span><span class="p">((</span><span class="n">NBTTagCompound</span><span class="p">)</span><span class="w"> </span><span class="n">stack</span><span class="p">.</span><span class="na">getTagCompound</span><span class="p">().</span><span class="na">copy</span><span class="p">());</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">copy</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
 </code></pre></div>
 
 

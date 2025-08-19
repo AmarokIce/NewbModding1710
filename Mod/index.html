@@ -665,7 +665,7 @@
   
   
   <span class="md-ellipsis">
-    工具、武器与材质
+    工具与武器
     
   </span>
   
@@ -689,6 +689,29 @@
   
   <span class="md-ellipsis">
     防具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../item/Material.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具与防具材质
     
   </span>
   
@@ -996,14 +1019,12 @@
 
 <h1 id="_1">主要类与代理</h1>
 <p>在<a href="../core.md">重要概念</a>中我们了解过了关于适配器与魔法，这一章节我们将要学习一些魔法的细节。</p>
-<p><a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/ModMain.java"><strong>章节相关源码：主类</strong></a>
-<br />
+<p><a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/ModMain.java"><strong>章节相关源码：主类</strong></a><br />
 <a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/proxy"><strong>章节相关源码：代理</strong></a></p>
 <h2 id="_2">生命周期事件</h2>
 <p><code>@Mod.EventHandler</code> 相关的生命周期事件已经在<a href="../core.md">重要概念</a>中提到过，因此不再赘述。</p>
 <h2 id="_3">实例与工厂</h2>
-<p><code>@Mod.Instance</code> 这个魔法注解可以搭配一个 ModID，用于获取目标 Mod 的实例。如果不设置的话默认填充当前 Mod 的实例。
-<br />
+<p><code>@Mod.Instance</code> 这个魔法注解可以搭配一个 ModID，用于获取目标 Mod 的实例。如果不设置的话默认填充当前 Mod 的实例。<br />
 需要绑定一个静态的，指向目标的字段。</p>
 <div class="highlight"><span class="filename">ModMain.java</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@Mod.Instance</span><span class="p">(</span><span class="n">ModMain</span><span class="p">.</span><span class="na">ID</span><span class="p">)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">ModMain</span><span class="w"> </span><span class="n">INSTANCE</span><span class="p">;</span>
@@ -1058,8 +1079,7 @@
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">)</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">IProxy</span><span class="w"> </span><span class="n">proxy</span><span class="p">;</span>
 </code></pre></div>
-<p>此处 Proxy 目标需要用点隔断路径标记，这将会在运行时绑定目标的代理类实例。
-<br />
+<p>此处 Proxy 目标需要用点隔断路径标记，这将会在运行时绑定目标的代理类实例。<br />
 代理可以直接使用，稍后将会在对应端生成对应的实例。</p>
 <div class="highlight"><span class="filename">ModMain.java</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nd">@Mod.EventHandler</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">preInit</span><span class="p">(</span><span class="n">FMLPreInitializationEvent</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>

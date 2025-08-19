@@ -661,15 +661,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#itemfoodexamplejava" class="md-nav__link">
-    <span class="md-ellipsis">
-      ItemFoodExample.java 源代码一览
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -691,7 +682,7 @@
   
   
   <span class="md-ellipsis">
-    工具、武器与材质
+    工具与武器
     
   </span>
   
@@ -715,6 +706,29 @@
   
   <span class="md-ellipsis">
     防具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具与防具材质
     
   </span>
   
@@ -1019,15 +1033,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#itemfoodexamplejava" class="md-nav__link">
-    <span class="md-ellipsis">
-      ItemFoodExample.java 源代码一览
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1134,85 +1139,42 @@
 <p>现在，我们得到了一个看起来相对复杂的食物类，但我们能做的事情更多了！比如允许玩家像是金苹果那样总是食用，并且稍后为玩家附加效果... 快去注册一个物品试一试吧！</p>
 <h2 id="_3">拓展阅读</h2>
 <h3 id="_4">食用或者饮用</h3>
-<p>要控制食物是食用或是饮用, 我们需要复写方法 <code>Item#getItemUseAction</code>。</p>
-<p><code>Item#getItemUseAction</code> 的参数是 ItemStack, 对应的就是这个物品的 ItemStack. 如果你对 ItemStack 还毫无概念, 请重读 
-Item 与 ItemStack 章节。
-<br />
-<code>EnumAction</code> 是玩家动作的集合, 在食物中我们通常会用到 <code>eat</code> 和 <code>drink</code>, 而默认则是 <code>eat</code>。如果我们想制作一个饮品，那么此处改为 <code>drink</code> 即可。</p>
-<div class="highlight"><span class="filename">ItemFoodExample.java</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nd">@Override</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">EnumAction</span><span class="w"> </span><span class="nf">getItemUseAction</span><span class="p">(</span><span class="n">ItemStack</span><span class="w"> </span><span class="n">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EnumAction</span><span class="p">.</span><span class="na">drink</span><span class="p">;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
+<p>如果我们想要做一些药水或者类似的饮品，我们应该修改使用方式。<br />
+但是我们应该从哪开始？仔细想一想，既然弓可以拉，药水可以喝，食物可以吃，那么必然有一种控制器决定了玩家的行为。我们可以从两个位置考虑：</p>
+<ol>
+<li>它们在 <code>Item</code> 中。</li>
+<li>它们在 <code>EntityPlayer</code> 中。</li>
+</ol>
+<p>无论如何，让我们先来看一下 <code>ItemFood</code> 中是否有覆写我们需要的内容。</p>
+<div class="highlight"><span class="filename">ItemFood.class</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cm">/**</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="cm"> * returns the action that specifies what animation to play when the items is being used</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="cm"> */</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="kd">public</span><span class="w"> </span><span class="n">EnumAction</span><span class="w"> </span><span class="nf">getItemUseAction</span><span class="p">(</span><span class="n">ItemStack</span><span class="w"> </span><span class="n">p_77661_1_</span><span class="p">)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EnumAction</span><span class="p">.</span><span class="na">eat</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+</code></pre></div>
+<p>一段搭配了 Forge 文档的方法，方法名写着“获取物品使用动作”，那么这就是我们需要的了！很显然，如果我们要控制食物是食用或是饮用, 我们需要复写方法 <code>Item#getItemUseAction</code>。<br />
+<code>Item#getItemUseAction</code> 方法的参数是 <code>ItemStack</code>, 对应的就是这个物品的 <code>ItemStack</code>. 如果你对 ItemStack 还毫无概念, 请重读 <a href="../ItemStack/">Item 与 ItemStack</a> 章节。<br />
+而这个方法的返回值 <code>EnumAction</code> 是玩家动作的集合, 先让我们看一下这个类里都是一些什么：</p>
+<div class="highlight"><span class="filename">EnumAction.class</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">EnumAction</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">none</span><span class="p">,</span><span class="w">   </span><span class="c1">// 无动作，Item 中默认。</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">eat</span><span class="p">,</span><span class="w">    </span><span class="c1">// 食用，ItemFood 中默认。</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">drink</span><span class="p">,</span><span class="w">  </span><span class="c1">// 啜饮</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">block</span><span class="p">,</span><span class="w">  </span><span class="c1">// 放置</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">bow</span><span class="p">;</span><span class="w">    </span><span class="c1">// 拉弓</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
+</code></pre></div>
+<p>在食物中我们通常会用到 <code>eat</code> 和 <code>drink</code>, 而默认则是 <code>eat</code>。如果我们想制作一个饮品，那么此处改为 <code>drink</code> 即可。</p>
+<div class="highlight"><span class="filename">ItemFoodExample.java</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nd">@Override</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">EnumAction</span><span class="w"> </span><span class="nf">getItemUseAction</span><span class="p">(</span><span class="n">ItemStack</span><span class="w"> </span><span class="n">pStack</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">EnumAction</span><span class="p">.</span><span class="na">drink</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="_5">数量限制</h3>
-<p>在 Minecraft 中，能饮用的通常都是药水，并且只能堆叠一个。我们也可以设计一个只能堆叠一个的物品，只需要在构造函数中加上一句即可：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">this</span><span class="p">.</span><span class="na">setMaxStackSize</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</code></pre></div>
-<h2 id="itemfoodexamplejava">ItemFoodExample.java 源代码一览</h2>
-<div class="highlight"><span class="filename">ItemFoodExample.java</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">club.snowlyicewolf.modding1710.common.item</span><span class="p">;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">club.snowlyicewolf.modding1710.ModMain</span><span class="p">;</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">club.snowlyicewolf.modding1710.init.InitItems</span><span class="p">;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">net.minecraft.entity.player.EntityPlayer</span><span class="p">;</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">net.minecraft.item.EnumAction</span><span class="p">;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">net.minecraft.item.ItemFood</span><span class="p">;</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">net.minecraft.item.ItemStack</span><span class="p">;</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">net.minecraft.potion.PotionEffect</span><span class="p">;</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">net.minecraft.world.World</span><span class="p">;</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ItemFoodExample</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ItemFood</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="c1">// 总是可以食用。</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">fastEat</span><span class="p">;</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="c1">// 食用后获得的药水效果。</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">PotionEffect</span><span class="o">[]</span><span class="w"> </span><span class="n">potionEffects</span><span class="p">;</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ItemFoodExample</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">amount</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">saturation</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isWolfFood</span><span class="p">,</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">                           </span><span class="kt">boolean</span><span class="w"> </span><span class="n">fastEat</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">alwaysEatable</span><span class="p">,</span><span class="w"> </span><span class="n">PotionEffect</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="n">effects</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span><span class="w"> </span><span class="n">saturation</span><span class="p">,</span><span class="w"> </span><span class="n">isWolfFood</span><span class="p">);</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
-<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setMaxStackSize</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
-<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">fastEat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fastEat</span><span class="p">;</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">potionEffects</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">effects</span><span class="p">;</span>
-<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">alwaysEatable</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">setAlwaysEdible</span><span class="p">();</span>
-<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>
-<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">        </span><span class="c1">// 这里与一般的物品类是一样的。</span>
-<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;example_item_food&quot;</span><span class="p">;</span>
-<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setUnlocalizedName</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
-<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setTextureName</span><span class="p">(</span><span class="n">ModMain</span><span class="p">.</span><span class="na">ID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
-<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setCreativeTab</span><span class="p">(</span><span class="n">ModMain</span><span class="p">.</span><span class="na">TAB</span><span class="p">);</span>
-<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a><span class="w">        </span><span class="n">InitItems</span><span class="p">.</span><span class="na">registerItem</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
-<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>
-<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">EnumAction</span><span class="w"> </span><span class="nf">getItemUseAction</span><span class="p">(</span><span class="n">ItemStack</span><span class="w"> </span><span class="n">pItemStack</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">EnumAction</span><span class="p">.</span><span class="na">drink</span><span class="p">;</span>
-<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>
-<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getMaxItemUseDuration</span><span class="p">(</span><span class="n">ItemStack</span><span class="w"> </span><span class="n">pItemStack</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a><span class="w">        </span><span class="c1">// 使用刻，当我们设定了快速食用，那么就缩短一倍时间 —— 就像是在啃干海带那样快。</span>
-<a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">fastEat</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">;</span>
-<a id="__codelineno-6-49" name="__codelineno-6-49" href="#__codelineno-6-49"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-50" name="__codelineno-6-50" href="#__codelineno-6-50"></a>
-<a id="__codelineno-6-51" name="__codelineno-6-51" href="#__codelineno-6-51"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-6-52" name="__codelineno-6-52" href="#__codelineno-6-52"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ItemStack</span><span class="w"> </span><span class="nf">onEaten</span><span class="p">(</span><span class="n">ItemStack</span><span class="w"> </span><span class="n">pItemStack</span><span class="p">,</span><span class="w"> </span><span class="n">World</span><span class="w"> </span><span class="n">pWorld</span><span class="p">,</span><span class="w"> </span><span class="n">EntityPlayer</span><span class="w"> </span><span class="n">pPlayer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-53" name="__codelineno-6-53" href="#__codelineno-6-53"></a><span class="w">        </span><span class="c1">// 如果为空，那么直接返回父类执行。</span>
-<a id="__codelineno-6-54" name="__codelineno-6-54" href="#__codelineno-6-54"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">potionEffects</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-55" name="__codelineno-6-55" href="#__codelineno-6-55"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">onEaten</span><span class="p">(</span><span class="n">pItemStack</span><span class="p">,</span><span class="w"> </span><span class="n">pWorld</span><span class="p">,</span><span class="w"> </span><span class="n">pPlayer</span><span class="p">);</span>
-<a id="__codelineno-6-56" name="__codelineno-6-56" href="#__codelineno-6-56"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-6-57" name="__codelineno-6-57" href="#__codelineno-6-57"></a>
-<a id="__codelineno-6-58" name="__codelineno-6-58" href="#__codelineno-6-58"></a><span class="w">        </span><span class="n">Arrays</span><span class="p">.</span><span class="na">stream</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">potionEffects</span><span class="p">)</span>
-<a id="__codelineno-6-59" name="__codelineno-6-59" href="#__codelineno-6-59"></a><span class="w">            </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">PotionEffect</span><span class="p">::</span><span class="k">new</span><span class="p">)</span><span class="w">             </span><span class="c1">// 我们需要先拷贝一份数据，因为 PotionEffect 与 ItemStack 一样，是一个数据对象。</span>
-<a id="__codelineno-6-60" name="__codelineno-6-60" href="#__codelineno-6-60"></a><span class="w">            </span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">pPlayer</span><span class="p">::</span><span class="n">addPotionEffect</span><span class="p">);</span><span class="w"> </span><span class="c1">// 然后赋予给玩家。</span>
-<a id="__codelineno-6-61" name="__codelineno-6-61" href="#__codelineno-6-61"></a>
-<a id="__codelineno-6-62" name="__codelineno-6-62" href="#__codelineno-6-62"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">onEaten</span><span class="p">(</span><span class="n">pItemStack</span><span class="p">,</span><span class="w"> </span><span class="n">pWorld</span><span class="p">,</span><span class="w"> </span><span class="n">pPlayer</span><span class="p">);</span>
-<a id="__codelineno-6-63" name="__codelineno-6-63" href="#__codelineno-6-63"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-64" name="__codelineno-6-64" href="#__codelineno-6-64"></a><span class="p">}</span>
+<p>在 Minecraft 中，能饮用的通常都是药水，并且只能堆叠一个。我们也可以设计一个只能堆叠一个的物品，只需要在构造方法中加上一句即可：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">this</span><span class="p">.</span><span class="na">setMaxStackSize</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 </code></pre></div>
 
 
@@ -1260,13 +1222,13 @@ Item 与 ItemStack 章节。
         
         
           
-          <a href="../ToolAndWeapon/" class="md-footer__link md-footer__link--next" aria-label="下一页: 工具、武器与材质">
+          <a href="../ToolAndWeapon/" class="md-footer__link md-footer__link--next" aria-label="下一页: 工具与武器">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                工具、武器与材质
+                工具与武器
               </div>
             </div>
             <div class="md-footer__button md-icon">

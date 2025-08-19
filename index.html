@@ -663,7 +663,7 @@
   
   
   <span class="md-ellipsis">
-    工具、武器与材质
+    工具与武器
     
   </span>
   
@@ -687,6 +687,29 @@
   
   <span class="md-ellipsis">
     防具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="item/Material.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具与防具材质
     
   </span>
   
@@ -1004,16 +1027,11 @@
 <li>你真的要写一个 1.7.10 的模组吗？在这个很难找到更多资源的版本，如果你没有一定 Java 基础去阅读先辈的代码，你可能会遇到更多挫折… 即便这个教程的目的就是帮助你，但是你依然可能会遇到各种奇怪的问题。</li>
 <li>你想要的就是一个 1.7.10 的模组吗？你有很多选择，你可以去高版本编写数据包，或者用高版本的 Java 感受到更加酣畅的编写体验。</li>
 </ol>
-<p>这些问题并不是为了尝试劝退你，如果你没有足够的决心，上面的问题甚至没有一个能够得到明确的答案，或许你应该花一些时间思考你想要的是什么，你知道的，半途而废没有任何好处，如果你没有解决问题的决心，你可能连构建都无法完成。当然，如果上述的问题你都有了明确的答案，那么我们就开始吧！
-<br />
-你不一定要对 Java 有足够的了解——你完全可以一边玩一边学，因为在最开始的时候，一切都很简单！在你准备好制作更复杂的内容的时候，你自然会开始学习新的内容，同时不会感受痛苦… 如果你能跟上节奏的话！这篇教学会尽可能用简单易懂的大白话，并且读者在读完这篇教学之后应该也会对 Java 8 的语法有一定掌握。
-<br />
-但这依然有个大前提——你至少需要知道如何布置 Java 8 的开发环境 Java Developtor Kit 8（JDK 8）。以及你需要有一个上手的 IDE：<code>IDEA</code>，<code>Eclipse</code>，<code>VSCode</code>，<code>NetBeans</code>… 当然，记事本也算，只要你不觉得记事本编程会让你感到痛苦就好。如果你从未尝试过 Java 开发，并且你只是打算写一些玩（或者你有计划学习 Kotlin），那么 <code>IDEA</code> 这样开箱即用的 IDE 非常适合你。而如果你打算正经学 Java, 请试一试 <code>Eclipse</code> 或者 <code>NetBeans</code>。<code>IDEA</code> 确实缩减了大量的工作，让开发得心应手，但是一些 Java 基本功你或许以后再也不会用，但你绝对不可以不会。至少试一试这些一直以来都作为行业顶级的 IDE 拓宽你的适用习惯，而不会被 JetBrains 舒适的工具链惯坏。当你已经得心应手的编写 Java, 你可以自由尝试。
-<br />
-值得一提的是，1.7.10 ForgeGradle 对 <code>Eclipse</code> 的支持非常好。
-<br />
-下载 Forge 提供的 Src 源包，然后把它解压在你喜欢的地方。做到这一步，准备工作你已经完成一半了，但是一个严肃的问题：1.7.10 Forge Gradle 不再维护，Gradle 版本支持相当落后，这意味着我们无法使用先进但依赖更高版本的 Gradle 的工具参与开发，此时我们需要使用第三方开发包。诸如使用我的 <a href="https://github.com/AmarokIce/MCModding1.7.10Skeleton">1.7.10 Mod 开发框架</a>，或者来自 <a href="https://github.com/GTNewHorizons/ExampleMod1.7.10">GTNH 维护的 MDK</a>。
-<br />
+<p>这些问题并不是为了尝试劝退你，如果你没有足够的决心，上面的问题甚至没有一个能够得到明确的答案，或许你应该花一些时间思考你想要的是什么，你知道的，半途而废没有任何好处，如果你没有解决问题的决心，你可能连构建都无法完成。当然，如果上述的问题你都有了明确的答案，那么我们就开始吧！<br />
+你不一定要对 Java 有足够的了解——你完全可以一边玩一边学，因为在最开始的时候，一切都很简单！在你准备好制作更复杂的内容的时候，你自然会开始学习新的内容，同时不会感受痛苦… 如果你能跟上节奏的话！这篇教学会尽可能用简单易懂的大白话，并且读者在读完这篇教学之后应该也会对 Java 8 的语法有一定掌握。<br />
+但这依然有个大前提——你至少需要知道如何布置 Java 8 的开发环境 Java Developtor Kit 8（JDK 8）。以及你需要有一个上手的 IDE：<code>IDEA</code>，<code>Eclipse</code>，<code>VSCode</code>，<code>NetBeans</code>… 当然，记事本也算，只要你不觉得记事本编程会让你感到痛苦就好。如果你从未尝试过 Java 开发，并且你只是打算写一些玩（或者你有计划学习 Kotlin），那么 <code>IDEA</code> 这样开箱即用的 IDE 非常适合你。而如果你打算正经学 Java, 请试一试 <code>Eclipse</code> 或者 <code>NetBeans</code>。<code>IDEA</code> 确实缩减了大量的工作，让开发得心应手，但是一些 Java 基本功你或许以后再也不会用，但你绝对不可以不会。至少试一试这些一直以来都作为行业顶级的 IDE 拓宽你的适用习惯，而不会被 JetBrains 舒适的工具链惯坏。当你已经得心应手的编写 Java, 你可以自由尝试。<br />
+值得一提的是，1.7.10 ForgeGradle 对 <code>Eclipse</code> 的支持非常好。<br />
+下载 Forge 提供的 Src 源包，然后把它解压在你喜欢的地方。做到这一步，准备工作你已经完成一半了，但是一个严肃的问题：1.7.10 Forge Gradle 不再维护，Gradle 版本支持相当落后，这意味着我们无法使用先进但依赖更高版本的 Gradle 的工具参与开发，此时我们需要使用第三方开发包。诸如使用我的 <a href="https://github.com/AmarokIce/MCModding1.7.10Skeleton">1.7.10 Mod 开发框架</a>，或者来自 <a href="https://github.com/GTNewHorizons/ExampleMod1.7.10">GTNH 维护的 MDK</a>。<br />
 感谢各路大佬提供的镜像源，以及耗子大佬也提供了<a href="https://search.mcbbs.net/thread-896542-1-1.html">离线开发包</a> （MCBBS 已经失效，请通过 <a href="https://github.com/mouse0w0/forge-mdk-offline">Github</a> 途径）</p>
 <h2 id="_3">部署工作区</h2>
 <p>如果你尝试写过高版本的模组，你可能只需要打开 IDE 然后导入就好了。但 1.7.10 的构建步骤可不是刷新一下 Gradle, 而且必须使用一个指令来初始化：</p>
@@ -1023,32 +1041,24 @@
 <p>如果你正在使用 Windows PowerShell, MacOS 或 Linux，你的指令是 <code>.\gradlew</code>, 只有在 cmd 环境才能缺省目录符号使用 <code>gradlew</code>。</p>
 </blockquote>
 <p>大多情况下，上述步骤只需要执行一次，并不需要每个项目都执行一次。如果你的项目出现任何问题，删除缓存后重新执行初始化能够解决大部分问题。</p>
-<p>如果你使用 IDEA，直接右击文件夹然后选择在 IDEA 中打开就好，IDEA会自动开始构建 Gradle。稍后可以执行 <code>genIntellijRuns</code> 来配置自动任务。
-<br />
-如果你使用 Eclipse，执行 <code>gradlew genEclipse</code> 可以生成一个专用的开发工作区文件夹。
-<br />
-如果你使用 VSCode，请确定你已经安装好所需要的一切插件，这里是插件清单：</p>
+<p>如果你使用 IDEA，直接右击文件夹然后选择在 IDEA 中打开就好，IDEA会自动开始构建 Gradle。稍后可以执行 <code>genIntellijRuns</code> 来配置自动任务。</p>
+<p>如果你使用 Eclipse，执行 <code>gradlew genEclipse</code> 可以生成一个专用的开发工作区文件夹。</p>
+<p>如果你使用 VSCode，请确定你已经安装好所需要的一切插件，这里是插件清单：</p>
 <div class="highlight"><span class="filename">VSCode Java 开发插件清单</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Java
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Gradle for Java
 </code></pre></div>
-<p>是的，就两个。你可能注意到了插件包 Package，没问题！这是好的,你当然可以安装它们！
-<br />
-如果你正在使用其他的 IDE，请使用控制台 cd 到你的工作环境后执行 <code>./gradlew</code> 进行环境 Gradle 构建。</p>
+<p>是的，就两个。你可能注意到了插件包 Package，没问题！这是好的,你当然可以安装它们！</p>
+<p>如果你正在使用其他的 IDE，请使用控制台 cd 到你的工作环境后执行 <code>./gradlew</code> 进行环境 Gradle 构建。</p>
 <div class="admonition note">
 <p class="admonition-title">如果你是 Windows 环境，并且发现 Win+R 输入 cmd 后打开的控制台窗口不具备管理员权限，请在 Win 菜单中搜索 cmd，并在结果中以管理员身份启用。</p>
 </div>
-<p><br />
-当你完成这一步，那么恭喜你——你已经迈出了 Mod 开发的第一步！实不相瞒，走到这里就已经足够劝退一些开发者…
-<br />
+<p>当你完成这一步，那么恭喜你——你已经迈出了 Mod 开发的第一步！实不相瞒，走到这里就已经足够劝退一些开发者…<br />
 当然，这里还有一个不错的提议：了解一下 <a href="https://boson.v2mcdev.com/introducation/forge.html">Forge 的历史</a> 对你的开发会有一定的帮助！</p>
 <h2 id="_4">最后检查</h2>
-<p>一切就绪！如果你遇到了一些问题，比如构建失败，你应该先阅读错报检查是网路问题还是缓存问题，当你构建失败后你就再也没有成功过，甚至看不到 xxx downloading… 字样，这可能是由于缓存未刷新，此时请打开你的任务管理员，杀死一切 Jdk、Java 相关的项目后重新构建，如果问题依然存在，请找到 Gradle User Home 目录（例如 Windows 环境下默认路径为 <code>C:/user/.gradle/caches</code>）并删除它。
-<br />
-如果没有任何问题，那么现在请检查 <code>mcmod.info</code> 文件，它在你的工作区的 <code>resources</code> 文件夹下！
-<br />
-在 1.7.10 中没有高版本那么多严格的规矩，通常来讲这个文件是不重要的。但是如果在模组中申请调用 MetaInfo，那么 Forge 将会从 <code>mcmod.info</code> 覆盖读取你的模组讯息。不过对于一些热衷于开包查找作者与版本的玩家或整合报作者们相当重要的，因此依然建议填写完毕。
-Modid 中不可有奇怪的字符如 <code>;</code> 等，最好只包含字母与下划线。
-<br />
+<p>一切就绪！如果你遇到了一些问题，比如构建失败，你应该先阅读错报检查是网路问题还是缓存问题，当你构建失败后你就再也没有成功过，甚至看不到 xxx downloading… 字样，这可能是由于缓存未刷新，此时请打开你的任务管理员，杀死一切 Jdk、Java 相关的项目后重新构建，如果问题依然存在，请找到 Gradle User Home 目录（例如 Windows 环境下默认路径为 <code>C:/user/.gradle/caches</code>）并删除它。<br />
+如果没有任何问题，那么现在请检查 <code>mcmod.info</code> 文件，它在你的工作区的 <code>resources</code> 文件夹下！<br />
+在 1.7.10 中没有高版本那么多严格的规矩，通常来讲这个文件是不重要的。但是如果在模组中申请调用 MetaInfo，那么 Forge 将会从 <code>mcmod.info</code> 覆盖读取你的模组讯息。不过对于一些热衷于开包查找作者与版本的玩家或整合报作者们相当重要的，因此依然建议填写完毕。<br />
+在 1.7.10 中，ModID 可以随意编写，包含任何字符。<br />
 如果你完成了全部内容，使用 <code>.\gradlew runClient</code> 启动一次游戏来验证你的工作区环境已经准备就绪！</p>
 <div class="admonition bug">
 <p class="admonition-title">build.gradle中可能需要改动的地方</p>

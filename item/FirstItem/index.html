@@ -592,15 +592,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#itemexamplejava" class="md-nav__link">
-    <span class="md-ellipsis">
-      ItemExample.java 源代码一览：
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -691,7 +682,7 @@
   
   
   <span class="md-ellipsis">
-    工具、武器与材质
+    工具与武器
     
   </span>
   
@@ -715,6 +706,29 @@
   
   <span class="md-ellipsis">
     防具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具与防具材质
     
   </span>
   
@@ -1019,15 +1033,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#itemexamplejava" class="md-nav__link">
-    <span class="md-ellipsis">
-      ItemExample.java 源代码一览：
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1046,8 +1051,7 @@
 
 <h1 id="_1">第一个物品</h1>
 <p>这一章节我们将会创建我们在 1.7.10 模组开发中的第一个物品。</p>
-<p><a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/item/ItemExample.java"><strong>章节相关源码: 创建</strong></a>
-<br />
+<p><a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/item/ItemExample.java"><strong>章节相关源码: 创建</strong></a><br />
 <a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/init/ItemInit.java"><strong>章节相关源码: 注册</strong></a></p>
 <h2 id="_2">创建一个物品</h2>
 <p>在<a href="../core.md">重要概念</a>中我们了解过了物品与方块的注册, 那么现在我们就可以来制作一些属于我们的物品了!
@@ -1104,27 +1108,6 @@ lang 文件中, 对于物品, 其键值为 <code>item.本地化名.name</code>, 
 </code></pre></div>
 <p>现在就可以看到我们的物品的贴图与名称了！</p>
 <p><img alt="我们第一个物品完成喽！" src="../../assets/item/FirstItem_P1.png" /></p>
-<h2 id="itemexamplejava">ItemExample.java 源代码一览：</h2>
-<div class="highlight"><span class="filename">ItemExample.java</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">club.snowlyicewolf.modding1710.common.item</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">club.snowlyicewolf.modding1710.ModMain</span><span class="p">;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">club.snowlyicewolf.modding1710.init.InitItems</span><span class="p">;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">net.minecraft.item.Item</span><span class="p">;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ItemExample</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ItemExample</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;example_item&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">        </span><span class="c1">// 设置本地化键。</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setUnlocalizedName</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="c1">// 设置贴图资源。</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setTextureName</span><span class="p">(</span><span class="n">ModMain</span><span class="p">.</span><span class="na">ID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span><span class="c1">// 加入创造模式物品栏。</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setCreativeTab</span><span class="p">(</span><span class="n">ModMain</span><span class="p">.</span><span class="na">TAB</span><span class="p">);</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">        </span><span class="c1">// 注册物品。</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">        </span><span class="n">InitItems</span><span class="p">.</span><span class="na">registerItem</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="p">}</span>
-</code></pre></div>
 
 
 

@@ -658,7 +658,7 @@
   
   
   <span class="md-ellipsis">
-    工具、武器与材质
+    工具与武器
     
   </span>
   
@@ -682,6 +682,29 @@
   
   <span class="md-ellipsis">
     防具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工具与防具材质
     
   </span>
   
@@ -982,8 +1005,8 @@
 <p>这一章节我们将会学习如何把物品放进创造模式物品栏，以及创建一个我们自己的创造模式物品栏。</p>
 <p><a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/util/BeanCreativeTab.java"><strong>章节相关源码</strong></a></p>
 <h2 id="_2">将物品加入创造模式物品栏组</h2>
-<p>添加到现有的创造模式物品栏非常简单，只需要调用 Item 下的 <code>Item#setCreativeTab</code> 即可。</p>
-<p>现在，我们把刚注册的物品加入杂项类物品栏：</p>
+<p>添加到现有的创造模式物品栏非常简单，只需要调用 Item 下的 <code>Item#setCreativeTab</code> 即可。<br />
+现在，我们把刚注册的物品加入杂项类物品栏：</p>
 <div class="highlight"><span class="filename">ItemExample.java</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">ItemExample</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">setCreativeTab</span><span class="p">(</span><span class="n">CreativeTabs</span><span class="p">.</span><span class="na">tabMisc</span><span class="p">);</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="cm">/* 其他代码 */</span>
@@ -993,8 +1016,7 @@
 <p class="admonition-title">1.7.10 中每个物品通常只会有一个创造模式物品栏，但是你可以通过覆写 <code>getCreativeTabs</code> 达到跨越多个物品栏的效果。</p>
 </div>
 <h2 id="_3">创建一个新的创造模式物品栏</h2>
-<p>通过实例化 <code>CreativeTabs</code> 方法可以完成创建一个全新的, 属于我们的创造模式物品栏。<strong>不过要注意的是，1.7.10 中创建 <code>CreativeTabs</code> 的时机非常敏感，因此建议直接使用实例化类的方式创建，而不是通过方法创建。</strong>
-<br />
+<p>通过实例化 <code>CreativeTabs</code> 方法可以完成创建一个全新的, 属于我们的创造模式物品栏。<strong>不过要注意的是，1.7.10 中创建 <code>CreativeTabs</code> 的时机非常敏感，因此建议直接使用实例化类的方式创建，而不是通过方法创建。</strong><br />
 <code>CreativeTabs</code> 是一个抽象类, 因此除了可以通过创建新的类后继承, 再实例化实例类。不过我们也可以直接通过 <code>Lambda 表达式</code> 来实例化抽象类. 这样会更方便, 下面会演示使用 <code>Lambda</code> 创建一个 CreativeTabs:</p>
 <p><div class="highlight"><span class="filename">ModMain.java</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">CreativeTabs</span><span class="w"> </span><span class="n">TAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CreativeTabs</span><span class="p">(</span><span class="s">&quot;example_item_group&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nd">@Override</span>
@@ -1018,9 +1040,9 @@
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">ModMain.java</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">CreativeTabs</span><span class="w"> </span><span class="n">TAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BeanCreativeTab</span><span class="p">(</span><span class="s">&quot;example_item_group&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">InitItems</span><span class="p">.</span><span class="na">ITEM_EXAMPLE</span><span class="p">);</span>
+<p><div class="highlight"><span class="filename">ModMain.java</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">CreativeTabs</span><span class="w"> </span><span class="n">TAB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BeanCreativeTab</span><span class="p">(</span><span class="s">&quot;example_item_group&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">InitItems</span><span class="p">.</span><span class="na">ITEM_EXAMPLE</span><span class="p">);</span>
 </code></pre></div>
-<p>现在我们可以为 ItemExample 设定我们刚才设定的组:</p>
+现在我们可以为 ItemExample 设定我们刚才设定的组:</p>
 <div class="highlight"><span class="filename">ItemExample.java</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="nf">ItemExample</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">setCreativeTab</span><span class="p">(</span><span class="n">ModMain</span><span class="p">.</span><span class="na">TAB</span><span class="p">);</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
