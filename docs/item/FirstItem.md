@@ -2,8 +2,7 @@
 
 这一章节我们将会创建我们在 1.7.10 模组开发中的第一个物品。
 
-[**章节相关源码: 创建**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/item/ItemExample.java)
-<br />
+[**章节相关源码: 创建**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/item/ItemExample.java)  
 [**章节相关源码: 注册**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/init/ItemInit.java)
 
 ## 创建一个物品
@@ -82,27 +81,3 @@ resources
 现在就可以看到我们的物品的贴图与名称了！
 
 ![我们第一个物品完成喽！](../assets/item/FirstItem_P1.png)
-
-## ItemExample.java 源代码一览：
-
-```java title="ItemExample.java"
-package club.snowlyicewolf.modding1710.common.item;
-
-import club.snowlyicewolf.modding1710.ModMain;
-import club.snowlyicewolf.modding1710.init.InitItems;
-import net.minecraft.item.Item;
-
-public class ItemExample extends Item {
-    public ItemExample() {
-        final String name = "example_item";
-        // 设置本地化键。
-        this.setUnlocalizedName(name);
-        // 设置贴图资源。
-        this.setTextureName(ModMain.ID + ":" + name);
-        // 加入创造模式物品栏。
-        this.setCreativeTab(ModMain.TAB);
-        // 注册物品。
-        InitItems.registerItem(name, this);
-    }
-}
-```

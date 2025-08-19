@@ -107,93 +107,52 @@ public class ItemFoodExample extends ItemFood {
 
 ### 食用或者饮用
 
-要控制食物是食用或是饮用, 我们需要复写方法 `Item#getItemUseAction`。
+如果我们想要做一些药水或者类似的饮品，我们应该修改使用方式。  
+但是我们应该从哪开始？仔细想一想，既然弓可以拉，药水可以喝，食物可以吃，那么必然有一种控制器决定了玩家的行为。我们可以从两个位置考虑：
 
-`Item#getItemUseAction` 的参数是 ItemStack, 对应的就是这个物品的 ItemStack. 如果你对 ItemStack 还毫无概念, 请重读 
-Item 与 ItemStack 章节。
-<br />
-`EnumAction` 是玩家动作的集合, 在食物中我们通常会用到 `eat` 和 `drink`, 而默认则是 `eat`。如果我们想制作一个饮品，那么此处改为 `drink` 即可。
+1. 它们在 `Item` 中。
+2. 它们在 `EntityPlayer` 中。
+
+无论如何，让我们先来看一下 `ItemFood` 中是否有覆写我们需要的内容。
+
+```java title="ItemFood.class"
+/**
+ * returns the action that specifies what animation to play when the items is being used
+ */
+public EnumAction getItemUseAction(ItemStack p_77661_1_)
+{
+    return EnumAction.eat;
+}
+```
+
+一段搭配了 Forge 文档的方法，方法名写着“获取物品使用动作”，那么这就是我们需要的了！很显然，如果我们要控制食物是食用或是饮用, 我们需要复写方法 `Item#getItemUseAction`。  
+`Item#getItemUseAction` 方法的参数是 `ItemStack`, 对应的就是这个物品的 `ItemStack`. 如果你对 ItemStack 还毫无概念, 请重读 [Item 与 ItemStack](./ItemStack.md) 章节。  
+而这个方法的返回值 `EnumAction` 是玩家动作的集合, 先让我们看一下这个类里都是一些什么：
+
+```java title="EnumAction.class"
+public enum EnumAction
+{
+    none,   // 无动作，Item 中默认。
+    eat,    // 食用，ItemFood 中默认。
+    drink,  // 啜饮
+    block,  // 放置
+    bow;    // 拉弓
+}
+```
+
+在食物中我们通常会用到 `eat` 和 `drink`, 而默认则是 `eat`。如果我们想制作一个饮品，那么此处改为 `drink` 即可。
 
 ```java title="ItemFoodExample.java"
 @Override
-public EnumAction getItemUseAction(ItemStack item) {
+public EnumAction getItemUseAction(ItemStack pStack) {
     return EnumAction.drink;
 }
 ```
 
 ### 数量限制
 
-在 Minecraft 中，能饮用的通常都是药水，并且只能堆叠一个。我们也可以设计一个只能堆叠一个的物品，只需要在构造函数中加上一句即可：
+在 Minecraft 中，能饮用的通常都是药水，并且只能堆叠一个。我们也可以设计一个只能堆叠一个的物品，只需要在构造方法中加上一句即可：
 
 ```java
 this.setMaxStackSize(1);
-```
-
-## ItemFoodExample.java 源代码一览
-
-```java title="ItemFoodExample.java"
-package club.snowlyicewolf.modding1710.common.item;
-
-import club.snowlyicewolf.modding1710.ModMain;
-import club.snowlyicewolf.modding1710.init.InitItems;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
-import net.minecraft.item.ItemFood;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.world.World;
-
-import java.util.Arrays;
-
-public class ItemFoodExample extends ItemFood {
-    // 总是可以食用。
-    private final boolean fastEat;
-    // 食用后获得的药水效果。
-    private final PotionEffect[] potionEffects;
-
-    public ItemFoodExample(int amount, float saturation, boolean isWolfFood,
-                           boolean fastEat, boolean alwaysEatable, PotionEffect ... effects) {
-        super(amount, saturation, isWolfFood);
-
-        this.setMaxStackSize(1);
-
-        this.fastEat = fastEat;
-        this.potionEffects = effects;
-        if (alwaysEatable) {
-            this.setAlwaysEdible();
-        }
-
-        // 这里与一般的物品类是一样的。
-        final String name = "example_item_food";
-        this.setUnlocalizedName(name);
-        this.setTextureName(ModMain.ID + ":" + name);
-        this.setCreativeTab(ModMain.TAB);
-        InitItems.registerItem(name, this);
-    }
-
-    @Override
-    public EnumAction getItemUseAction(ItemStack pItemStack) {
-        return EnumAction.drink;
-    }
-
-    @Override
-    public int getMaxItemUseDuration(ItemStack pItemStack) {
-        // 使用刻，当我们设定了快速食用，那么就缩短一倍时间 —— 就像是在啃干海带那样快。
-        return this.fastEat ? 16 : 32;
-    }
-
-    @Override
-    public ItemStack onEaten(ItemStack pItemStack, World pWorld, EntityPlayer pPlayer) {
-        // 如果为空，那么直接返回父类执行。
-        if (this.potionEffects.length < 1) {
-            return super.onEaten(pItemStack, pWorld, pPlayer);
-        }
-
-        Arrays.stream(this.potionEffects)
-            .map(PotionEffect::new)             // 我们需要先拷贝一份数据，因为 PotionEffect 与 ItemStack 一样，是一个数据对象。
-            .forEach(pPlayer::addPotionEffect); // 然后赋予给玩家。
-
-        return super.onEaten(pItemStack, pWorld, pPlayer);
-    }
-}
 ```

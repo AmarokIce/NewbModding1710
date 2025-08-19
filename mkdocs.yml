@@ -19,31 +19,28 @@ nav:
     - ItemStack       : item/ItemStack.md
     - 创造模式物品栏  : item/TagGroup.md
     - 创建一个食物    : item/ItemFood.md
-    - 工具、武器与材质: item/ToolAndWeapon.md
+    - 工具与武器      : item/ToolAndWeapon.md
     - 防具            : item/Armors.md
+    - 工具与防具材质  : item/Material.md
     - 元数据区分的物品: item/MetaItem.md
   - 方块:
     - 第一个方块: block/FirstBlock.md
     - 方块朝向: block/BlockFacing.md
   # - 方块实体:
   #   - 方块与方块实体: block/TileBlock.md
-  #   - NBT, 数据存储器: block/NBT.md
-  #   - 方块实体的刻实现: block/TileTick.md
+  #   - 工作中方块: block/WorkingBlock.md
+  #   - 数据同步与封包: block/ProxyPacket.md
   # - 网络通讯:
   #   - 数据封包: Proxy/NetWork.md
-  # - GUI:
-  #   - 信号与数据代理: GUI/GUI.md
-  #   - NEI的支持: GUI/NEI.md
+  # - UI 与 HUD:
+  #   - GameUI: GUI/GUI.md
   #   - HUD: GUI/HUD.md
   # - 药水效果:
-  #   - 药水 ID 反射: Effect/ID.md
+  #   - 药水与准备工作: Effect/ID.md
   #   - 药水创建: Effect/Effect.md
-  # - 生物
-  #   - 生物与 AI
-  #   - 生物渲染
   # - 事件:
-  #   - 发生肾么事了: Event/Event.md
-  #   - 注册独立事件: Event/InitEvent.md
+  #   - 事件，广播与订阅: Event/Event.md
+  #   - 何时使用事件: Event/InitEvent.md
   #   - 可用事件一览: Event/EventList.md
   # - 生物群系与结构体:
   #   - 生物群系: Biome/Biome.md
@@ -52,15 +49,19 @@ nav:
   # - 指令:
   #   - 服务端上的指令: Command/ServerCommand.md
   #   - 客户端上的指令: Command/ClientCommand.md
+  # - 生物
+  #   - 生物与 AI
+  #   - 生物渲染
 - 进阶开发:
   - 准备发车: advanced/index.md
-  # - 渲染OBJ模型:
-  #   - 认识 GL: advanced/obj/OpenGL.md
+  # - OBJ 模型:
   #   - 方块实体渲染器(BlockEntityRenderer): advanced/obj/TileRenderer.md
   #   - GL11 与资源路径: advanced/obj/ObjRender.md
   #   - 手持物品的渲染: advanced/obj/ItemObj.md
 # - 凤梨文档:
 #   - 凤梨通灵术: docs/PPc.md
+#   - 凤梨标签: docs/PTag.md
+#   - WolfTailUI: docs/WUI.md
 - 回到凤梨田: https://wolf.snowlyicewolf.club/
 
 theme:

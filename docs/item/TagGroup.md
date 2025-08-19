@@ -6,8 +6,7 @@
 
 ## 将物品加入创造模式物品栏组
 
-添加到现有的创造模式物品栏非常简单，只需要调用 Item 下的 `Item#setCreativeTab` 即可。
-
+添加到现有的创造模式物品栏非常简单，只需要调用 Item 下的 `Item#setCreativeTab` 即可。  
 现在，我们把刚注册的物品加入杂项类物品栏：
 
 ```java title="ItemExample.java"
@@ -22,8 +21,7 @@ public ItemExample() {
 
 ## 创建一个新的创造模式物品栏
 
-通过实例化 `CreativeTabs` 方法可以完成创建一个全新的, 属于我们的创造模式物品栏。**不过要注意的是，1.7.10 中创建 `CreativeTabs` 的时机非常敏感，因此建议直接使用实例化类的方式创建，而不是通过方法创建。**
-<br />
+通过实例化 `CreativeTabs` 方法可以完成创建一个全新的, 属于我们的创造模式物品栏。**不过要注意的是，1.7.10 中创建 `CreativeTabs` 的时机非常敏感，因此建议直接使用实例化类的方式创建，而不是通过方法创建。**  
 `CreativeTabs` 是一个抽象类, 因此除了可以通过创建新的类后继承, 再实例化实例类。不过我们也可以直接通过 `Lambda 表达式` 来实例化抽象类. 这样会更方便, 下面会演示使用 `Lambda` 创建一个 CreativeTabs:
 
 ```java title="ModMain.java"

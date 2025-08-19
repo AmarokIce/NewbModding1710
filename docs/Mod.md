@@ -2,8 +2,7 @@
 
 在[重要概念](../core.md)中我们了解过了关于适配器与魔法，这一章节我们将要学习一些魔法的细节。
 
-[**章节相关源码：主类**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/ModMain.java)
-<br />
+[**章节相关源码：主类**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/ModMain.java)  
 [**章节相关源码：代理**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/proxy)
 
 ## 生命周期事件
@@ -12,8 +11,7 @@
 
 ## 实例与工厂
 
-`@Mod.Instance` 这个魔法注解可以搭配一个 ModID，用于获取目标 Mod 的实例。如果不设置的话默认填充当前 Mod 的实例。
-<br />
+`@Mod.Instance` 这个魔法注解可以搭配一个 ModID，用于获取目标 Mod 的实例。如果不设置的话默认填充当前 Mod 的实例。  
 需要绑定一个静态的，指向目标的字段。
 
 ```java title="ModMain.java"
@@ -88,8 +86,7 @@ public final class ServerProxy implements IProxy {
 public static IProxy proxy;
 ```
 
-此处 Proxy 目标需要用点隔断路径标记，这将会在运行时绑定目标的代理类实例。
-<br />
+此处 Proxy 目标需要用点隔断路径标记，这将会在运行时绑定目标的代理类实例。  
 代理可以直接使用，稍后将会在对应端生成对应的实例。
 
 ```java title="ModMain.java"
