@@ -21,7 +21,7 @@ public class ItemFoodExample extends ItemFood {
                            boolean fastEat, boolean alwaysEatable, PotionEffect ... effects) {
         super(amount, saturation, isWolfFood);
 
-        this.setMaxStackSize(1);
+        this.setMaxStackSize(16);
 
         this.fastEat = fastEat;
         this.potionEffects = effects;
@@ -39,7 +39,7 @@ public class ItemFoodExample extends ItemFood {
 
     @Override
     public EnumAction getItemUseAction(ItemStack pStack) {
-        return EnumAction.drink;
+        return EnumAction.eat;
     }
 
     @Override

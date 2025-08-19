@@ -1,3 +1,9 @@
 itemGroup.example_item_group=示例物品栏
 
 item.example_item.name=示例物品
+item.example_item_food.name=示例食品
+item.example_pickaxe.name=示例镐子
+item.example_sword.name=示例剑
+item.example_tool.name=示例工具
+
+item.exampletool.info=右击僵尸将会直接抄首。随后可以得到它的头。

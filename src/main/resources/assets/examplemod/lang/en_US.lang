@@ -1,3 +1,9 @@
 itemGroup.example_item_group=Example Creative Tab
 
 item.example_item.name=Example Item
+item.example_item_food.name=Example Food
+item.example_pickaxe.name=Example Pickaxe
+item.example_sword.name=Example Sword
+item.example_tool.name=Example Tool
+
+item.exampletool.info=Right-Click the zombie will kill them and get they head.

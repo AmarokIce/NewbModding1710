@@ -4,6 +4,7 @@ import club.snowlyicewolf.modding1710.ModMain;
 import club.snowlyicewolf.modding1710.init.InitItems;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemStack;
 
 public class ItemPickaxeExample extends ItemPickaxe {
     public ItemPickaxeExample() {
@@ -21,5 +22,10 @@ public class ItemPickaxeExample extends ItemPickaxe {
     @Override
     public boolean func_150897_b(Block pBlock) {
         return true;
+    }
+
+    @Override
+    public float func_150893_a(ItemStack p_150893_1_, Block p_150893_2_) {
+        return 10.0f;
     }
 }
