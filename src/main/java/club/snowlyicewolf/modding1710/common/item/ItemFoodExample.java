@@ -38,27 +38,27 @@ public class ItemFoodExample extends ItemFood {
     }
 
     @Override
-    public EnumAction getItemUseAction(ItemStack pItemStack) {
+    public EnumAction getItemUseAction(ItemStack pStack) {
         return EnumAction.drink;
     }
 
     @Override
-    public int getMaxItemUseDuration(ItemStack pItemStack) {
+    public int getMaxItemUseDuration(ItemStack pStack) {
         // 使用刻，当我们设定了快速食用，那么就缩短一倍时间 —— 就像是在啃干海带那样快。
         return this.fastEat ? 16 : 32;
     }
 
     @Override
-    public ItemStack onEaten(ItemStack pItemStack, World pWorld, EntityPlayer pPlayer) {
+    public ItemStack onEaten(ItemStack pStack, World pWorld, EntityPlayer pPlayer) {
         // 如果为空，那么直接返回父类执行。
         if (this.potionEffects.length < 1) {
-            return super.onEaten(pItemStack, pWorld, pPlayer);
+            return super.onEaten(pStack, pWorld, pPlayer);
         }
 
         Arrays.stream(this.potionEffects)
             .map(PotionEffect::new)             // 我们需要先拷贝一份数据，因为 PotionEffect 与 ItemStack 一样，是一个数据对象。
             .forEach(pPlayer::addPotionEffect); // 然后赋予给玩家。
 
-        return super.onEaten(pItemStack, pWorld, pPlayer);
+        return super.onEaten(pStack, pWorld, pPlayer);
     }
 }

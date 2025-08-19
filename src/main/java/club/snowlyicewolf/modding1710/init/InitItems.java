@@ -1,7 +1,6 @@
 package club.snowlyicewolf.modding1710.init;
 
-import club.snowlyicewolf.modding1710.common.item.ItemExample;
-import club.snowlyicewolf.modding1710.common.item.ItemFoodExample;
+import club.snowlyicewolf.modding1710.common.item.*;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -21,9 +20,11 @@ public final class InitItems {
     public static final Item ITEM_EXAMPLE = new ItemExample();
     public static final Item ITEM_EXAMPLE_FOOD = new ItemFoodExample(
         1, 0.1f, false, false, true,
-        // 你可能对 Potion 还不熟悉，它的构造句式是：效果 Id, 效果时间（tick），效果登记（从 0 计数）。
         new PotionEffect(Potion.nightVision.getId(), 10, 0)
     );
+    public static final Item ITEM_EXAMPLE_PICKAXE = new ItemPickaxeExample();
+    public static final Item ITEM_EXAMPLE_SWORD = new ItemSwordExample();
+    public static final Item ITEM_EXAMPLE_TOOL = new ItemToolExample();
 
     // 在这里注册我们的物品。
     public static void registerItem(String name, Item item) {
