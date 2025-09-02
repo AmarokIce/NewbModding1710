@@ -54,6 +54,10 @@ nav:
   #   - 生物渲染
 - 进阶开发:
   - 准备发车: advanced/index.md
+  - 物品:
+    - 按照数量变换图标的物品: advanced/item/MagicItem.md
+    - NBT 区分的物品: advanced/item/NbtItem.md
+    - 创建一个“钱包”: advanced/item/WalletItem.md
   # - OBJ 模型:
   #   - 方块实体渲染器(BlockEntityRenderer): advanced/obj/TileRenderer.md
   #   - GL11 与资源路径: advanced/obj/ObjRender.md

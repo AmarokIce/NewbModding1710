@@ -8,7 +8,7 @@
 
 ## 创建一个食物
 
-首先创建新的类 `ItemFoodExample`, 继承 `ItemFood`。此时，你的 IDE 应该会警告你，因为 `ItemFood` 是一个带构造函数的类。现在，我们开始观察 `ItemFood` 的构造函数：
+首先创建新的类 `ItemFoodExample`, 继承 `ItemFood`。此时，IDE 应该会警告读者这有一个错误：因为 `ItemFood` 是一个带构造函数的类。现在，我们开始观察 `ItemFood` 的构造函数：
 
 ```java title="ItemFood.class"
 public ItemFood(int p_i45339_1_, float p_i45339_2_, boolean p_i45339_3_)
@@ -126,7 +126,7 @@ public EnumAction getItemUseAction(ItemStack p_77661_1_)
 ```
 
 一段搭配了 Forge 文档的方法，方法名写着“获取物品使用动作”，那么这就是我们需要的了！很显然，如果我们要控制食物是食用或是饮用, 我们需要复写方法 `Item#getItemUseAction`。  
-`Item#getItemUseAction` 方法的参数是 `ItemStack`, 对应的就是这个物品的 `ItemStack`. 如果你对 ItemStack 还毫无概念, 请重读 [Item 与 ItemStack](./ItemStack.md) 章节。  
+`Item#getItemUseAction` 方法的参数是 `ItemStack`, 对应的就是这个物品的 `ItemStack`. 如果读者对 `ItemStack` 还毫无概念, 请重读 [Item 与 ItemStack](./ItemStack.md) 章节。  
 而这个方法的返回值 `EnumAction` 是玩家动作的集合, 先让我们看一下这个类里都是一些什么：
 
 ```java title="EnumAction.class"

@@ -39,7 +39,7 @@ public class ItemExample extends Item {
 ## 资源文件
 
 ### 语言文件
-现在, 让我们进入 resources 文件夹, 创建文件夹 `assets/你的 ModID/` , 再分别创建文件夹 `lang` 和 `textures/items/`。
+现在, 让我们进入 resources 文件夹, 创建文件夹 `assets/读者的 ModID/` , 再分别创建文件夹 `lang` 和 `textures/items/`。
 在 `lang` 文件夹中创建文件 `en_US.lang` 与 `zh_CN.lang`, 这两份文件就是我们的语言文件了, 而其名称着对应国家语言缩写。
 
 > **lang 文件的语法约定:**
