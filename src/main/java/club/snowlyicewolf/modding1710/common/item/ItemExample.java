@@ -2,7 +2,11 @@ package club.snowlyicewolf.modding1710.common.item;
 
 import club.snowlyicewolf.modding1710.ModMain;
 import club.snowlyicewolf.modding1710.init.InitItems;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 
 public class ItemExample extends Item {
     public ItemExample() {

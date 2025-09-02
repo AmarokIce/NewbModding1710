@@ -2,13 +2,14 @@ package club.snowlyicewolf.modding1710.common.item;
 
 import club.snowlyicewolf.modding1710.ModMain;
 import club.snowlyicewolf.modding1710.init.InitItems;
+import club.snowlyicewolf.modding1710.init.InitMaterials;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 
 public class ItemPickaxeExample extends ItemPickaxe {
     public ItemPickaxeExample() {
-        super(ToolMaterial.IRON);
+        super(InitMaterials.TOOL_SCRAP);
 
         this.setMaxDamage(114514);
 

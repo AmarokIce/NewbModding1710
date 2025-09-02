@@ -11,6 +11,7 @@ import net.minecraft.potion.PotionEffect;
 import java.util.Map;
 import java.util.Set;
 
+@SuppressWarnings("unused")
 public final class InitItems {
     // 这里是我们的注册表。
     private static final Map<Item, String> ITEMS = Maps.newLinkedHashMap();
@@ -25,6 +26,11 @@ public final class InitItems {
     public static final Item ITEM_EXAMPLE_PICKAXE = new ItemPickaxeExample();
     public static final Item ITEM_EXAMPLE_SWORD = new ItemSwordExample();
     public static final Item ITEM_EXAMPLE_TOOL = new ItemToolExample();
+
+    public static final Item ITEM_EXAMPLE_ARMOR_HELMET = new ItemArmorsExample(0);
+    public static final Item ITEM_EXAMPLE_ARMOR_CHEST = new ItemArmorsExample(1);
+    public static final Item ITEM_EXAMPLE_ARMOR_LEGGING = new ItemArmorsExample(2);
+    public static final Item ITEM_EXAMPLE_ARMOR_BOOTS = new ItemArmorsExample(3);
 
     // 在这里注册我们的物品。
     public static void registerItem(String name, Item item) {
