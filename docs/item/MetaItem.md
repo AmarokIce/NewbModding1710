@@ -8,7 +8,7 @@
 
 首先我们创建一个物品，看起来和 `ItemExample` 非常相似：
 
-```java title="ItemExampleWithSubItem.java`
+```java title="ItemExampleWithSubItem.java"
 public class ItemExampleWithSubItem extends Item {
     public ItemExampleWithSubItem() {
         final String name = "example_item_with_sub_item";
@@ -136,7 +136,7 @@ public void registerIcons(IIconRegister register) {
 }
 ```
 
-注册完纹理，我们继续寻找获取它们的方法。这一搜，获取纹理的方法也太多！好吧，这一部分会放在[进阶教学](../advanced/item/MagicItem.md)中细细的解析，直至目前，我们需用到的是 `Item#getIconFromDamage` 方法。
+注册完纹理，我们继续寻找获取它们的方法。这一搜，获取纹理的方法也太多！好吧，这一部分会放在进阶开发的章节中细细的解析，直至目前，我们需用到的是 `Item#getIconFromDamage` 方法。
 
 ```java title="ItemExampleWithSubItem.java"
 @Override
@@ -152,10 +152,12 @@ public IIcon getIconFromDamage(int meta) {
 }
 ```
 
+!!! abstract "想要了解更多关于 `getIcon` 相关的内容吗？这一部分将会在进阶开发的章节中继续解析！"
+
 ![Sub item!](../assets/item/MetaItem_P2.png)
 
 ### 拓展阅读：我们还需要 `setUnlocalizedName` 与 `setTextureName` 吗？
 
-如果你在各种 getter 中均为调取本地的变量，那么你应该不需要这么做了。因为你已经提交了必要的数据，Minecraft 已经知道你想要什么了。
+如果在各种 getter 中均为调取本地的变量，那么读者应该不需要这么做了。因为这里已经提交了必要的数据，Minecraft 已经知道想要什么了。
 
 这就是 getter 与 setter 多态化编程的魅力！在日后的编程中也应该多多善用 getter 与 setter！

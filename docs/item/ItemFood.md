@@ -156,3 +156,31 @@ public EnumAction getItemUseAction(ItemStack pStack) {
 ```java
 this.setMaxStackSize(1);
 ```
+
+### 食用后返回碗或玻璃瓶，或其他物品
+
+当然，我们需要放在 `Item#onEaten` 下。
+
+```java title="ItemFoodExample"
+@Override
+public ItemStack onEaten(ItemStack pStack, World pWorld, EntityPlayer pPlayer) {
+    // 确定返回物品
+    final ItemStack itemCraftingBack = new ItemStack(Items.bowl);
+
+    // 当无法把物品塞到玩家的物品栏的时候，我们应该让它以掉落物形式生成到世界
+    if (!pPlayer.inventory.addItemStackToInventory(itemCraftingBack)) {
+        // 创建一个掉落物，位置在玩家所在位置，此处 y 增加 0.5 是为了让掉落物处于玩家所在方块位置（BlockPos）的中心位置。
+        final EntityItem entityItem = new EntityItem(pWorld,
+            pPlayer.posX, pPlayer.posY + 0.5, pPlayer.posZ,
+            itemCraftingBack);
+        // 然后生成到世界。
+        pWorld.spawnEntityInWorld(entityItem);
+    }
+
+    /* 其他代码 */
+}
+```
+
+
+!!! abstract "正在思考如何让这样的返回物品在合成后返回吗？这一部分将会在进阶开发的章节中继续解析！"
+

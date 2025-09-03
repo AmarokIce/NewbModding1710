@@ -3,7 +3,7 @@
 这一章节我们将会创建我们在 1.7.10 模组开发中的第一个物品。
 
 [**章节相关源码: 创建**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/item/ItemExample.java)  
-[**章节相关源码: 注册**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/init/ItemInit.java)
+[**章节相关源码: 注册**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/init/InitItems.java)
 
 ## 创建一个物品
 
