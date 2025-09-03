@@ -19,6 +19,7 @@ public final class InitItems {
     private InitItems() {}
 
     public static final Item ITEM_EXAMPLE = new ItemExample();
+    public static final Item ITEM_EXAMPLE_WITH_SUBITEM = new ItemExampleWithSubItem();
     public static final Item ITEM_EXAMPLE_FOOD = new ItemFoodExample(
         1, 0.1f, false, false, true,
         new PotionEffect(Potion.nightVision.getId(), 10, 0)

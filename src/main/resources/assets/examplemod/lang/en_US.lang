@@ -5,5 +5,9 @@ item.example_item_food.name=Example Food
 item.example_pickaxe.name=Example Pickaxe
 item.example_sword.name=Example Sword
 item.example_tool.name=Example Tool
+item.example_item_with_sub_item_0.name=Example Item With Sub 0
+item.example_item_with_sub_item_1.name=Example Item With Sub 1
+item.example_item_with_sub_item_2.name=Example Item With Sub 2
+item.example_item_with_sub_item_3.name=Example Item With Sub 3
 
 item.exampletool.info=Right-Click the zombie will kill them and get they head.

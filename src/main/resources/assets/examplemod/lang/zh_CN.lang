@@ -5,5 +5,9 @@ item.example_item_food.name=示例食品
 item.example_pickaxe.name=示例镐子
 item.example_sword.name=示例剑
 item.example_tool.name=示例工具
+item.example_item_with_sub_item_0.name=带子物品的示例物品 0
+item.example_item_with_sub_item_1.name=带子物品的示例物品 1
+item.example_item_with_sub_item_2.name=带子物品的示例物品 2
+item.example_item_with_sub_item_3.name=带子物品的示例物品 3
 
 item.exampletool.info=右击僵尸将会直接抄首。随后可以得到它的头。
