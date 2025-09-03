@@ -1,5 +1,6 @@
 package club.snowlyicewolf.modding1710;
 
+import club.snowlyicewolf.modding1710.init.InitBlocks;
 import club.snowlyicewolf.modding1710.init.InitItems;
 import club.snowlyicewolf.modding1710.proxy.IProxy;
 import club.snowlyicewolf.modding1710.util.BeanCreativeTab;
@@ -54,6 +55,7 @@ public final class ModMain {
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit();
         InitItems.init();
+        InitBlocks.init();
     }
 
     // 标准加载，这是你最后注册的机会。通常处理一些标准流程和注册过之后要做的事情。

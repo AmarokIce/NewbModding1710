@@ -2,7 +2,6 @@ package club.snowlyicewolf.modding1710.common.item;
 
 import club.snowlyicewolf.modding1710.ModMain;
 import club.snowlyicewolf.modding1710.init.InitItems;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityZombie;
@@ -11,8 +10,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.DamageSource;
-import net.minecraftforge.common.ForgeHooks;
 
 import javax.annotation.CheckForNull;
 import java.util.List;
