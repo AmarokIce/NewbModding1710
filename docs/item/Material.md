@@ -2,6 +2,8 @@
 
 在前两个章节中我们学习了如何创建一个工具、武器以及一套盔甲，但是我们都接触到了一个概念：材质。这个章节我们将要学习如何创建一个我们自己的材质。
 
+[**章节相关源码**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/init/InitMaterials.java)
+
 ## 思考：如何注册材质
 
 我们在工具与武器章节中已经观察过 `ToolMaterial` 了，相信读者在编写盔甲时也应该已经观察过 `ArmorMaterial` 了。  
