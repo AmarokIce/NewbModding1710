@@ -228,4 +228,4 @@ public void addInformation(@CheckForNull ItemStack pStack, EntityPlayer pPlayer,
 
 > 请使用你所学的内容，制作一个全新的，独立的工具类型。它的材质是铁制品，并且可以代替打火石生火。它拥有 243 点耐久，并且最大堆叠数量为 1。使用它攻击任何生物都将造成三秒的燃烧效果。
 
-答案将会在下一章节末公开。
+> 答案正在制作...

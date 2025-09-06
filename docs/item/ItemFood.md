@@ -22,7 +22,7 @@ public ItemFood(int p_i45339_1_, float p_i45339_2_, boolean p_i45339_3_)
 ```
 哦不！我们遇到了 `Srg 名`！不过没关系，更具参数，我们可以尝试翻译一下这些 `Srg 名` 都意味着什么：
 
-```java
+```java title="ItemFood.class"
 public ItemFood(int amount, float saturation, boolean isWolfFood)
 {
     this.itemUseDuration = 32;                  // 使用时刻，默认 32 tick
@@ -167,14 +167,10 @@ public ItemStack onEaten(ItemStack pStack, World pWorld, EntityPlayer pPlayer) {
     // 确定返回物品
     final ItemStack itemCraftingBack = new ItemStack(Items.bowl);
 
-    // 当无法把物品塞到玩家的物品栏的时候，我们应该让它以掉落物形式生成到世界
+    // 当无法把物品塞到玩家的物品栏的时候，我们应该让它以掉落物形式生成到世界。
     if (!pPlayer.inventory.addItemStackToInventory(itemCraftingBack)) {
-        // 创建一个掉落物，位置在玩家所在位置，此处 y 增加 0.5 是为了让掉落物处于玩家所在方块位置（BlockPos）的中心位置。
-        final EntityItem entityItem = new EntityItem(pWorld,
-            pPlayer.posX, pPlayer.posY + 0.5, pPlayer.posZ,
-            itemCraftingBack);
-        // 然后生成到世界。
-        pWorld.spawnEntityInWorld(entityItem);
+        // 让玩家丢出当前物品。
+        pPlayer.dropPlayerItemWithRandomChoice(pStack, false);
     }
 
     /* 其他代码 */

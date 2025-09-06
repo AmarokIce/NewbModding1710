@@ -27,7 +27,6 @@ nav:
                 - 第一个方块: block/FirstBlock.md
                 - 方块朝向: block/BlockFacing.md
                 - 方块的特殊渲染: block/RenderBlock.md
-                - 带有元数据的方块: block/MetaBlock.md
           - 方块实体:
                 - 方块与方块实体: tile/TileBlock.md
                 - 工作中方块: tile/WorkingBlock.md
@@ -39,28 +38,24 @@ nav:
                 - 注册酿造合成表: craft/BrewingRecipe.md
                 - 矿物辞典与注册矿物辞典: craft/OreDict.md
           - 生物伤害类型: DamageType.md
-          - 网络通讯:
-                - 数据封包: Proxy/NetWork.md
+          - 网络通讯: NetWork.md
           - UI 与 HUD:
-                - GameUI: GUI/GUI.md
-                - HUD: GUI/HUD.md
+                - GameUI: gui/GUI.md
+                - HUD: gui/HUD.md
           - 事件:
-                - 事件，广播与订阅: Event/Event.md
-                - 何时使用事件: Event/InitEvent.md
-                - 可用事件一览: Event/EventList.md
+                - 事件，广播与订阅: event/Event.md
+                - 何时使用事件: event/InitEvent.md
+                - 可用事件一览: event/EventList.md
           - 药水效果:
-                - 药水与准备工作: Effect/ID.md
-                - 药水创建: Effect/Effect.md
+                - 药水与准备工作: effect/ID.md
+                - 药水创建: effect/Effect.md
           - 生物群系与结构体:
-                - 生物群系: Biome/Biome.md
-                - 树与树苗: Biome/Tree.md
-                - 结构: Biome/Building.md
+                - 生物群系: biome/Biome.md
+                - 树与树苗: biome/Tree.md
+                - 结构: biome/Building.md
           - 指令:
-                - 服务端上的指令: Command/ServerCommand.md
-                - 客户端上的指令: Command/ClientCommand.md
-          - 生物:
-                - 生物与 AI
-                - 生物渲染
+                - 服务端上的指令: command/ServerCommand.md
+                - 客户端上的指令: command/ClientCommand.md
     - 进阶开发:
           - 准备发车: advanced/index.md
           - 物品:
@@ -69,16 +64,37 @@ nav:
                 - 创建一个“钱包”: advanced/item/WalletItem.md
           - 方块:
                 - 分离注册的方块与方块物品: advanced/block/BlockItem.md
+                - 带有元数据的方块: advanced/block/MetaBlock.md
+
+          - 生物:
+                - 生物与 AI: advanced/entity/Entity.md
+                - 生物渲染: advanced/entity/EntityRender.md
+          - 世界:
+                - 世界装饰器: advanced/world/WorldGen.md
+                - 矿物生成: advanced/world/OreGen.md
+                - 世界: advanced/world/World.md
+          - 与常见模组联动:
+                - 兼容 NEI: advanced/lib/Nei.md
+                - 兼容 Waila: advanced/lib/Waila.md
+                - 使用 GeckoLib: advanced/lib/GeoModel.md
           - OBJ 模型:
                 - 方块实体渲染器(BlockEntityRenderer): advanced/obj/TileRenderer.md
                 - GL11 与资源路径: advanced/obj/ObjRender.md
                 - 手持物品的渲染: advanced/obj/ItemObj.md
     - 凤梨文档:
+          - 欢迎使用 Pineapple TogoCups!: togocup/index.md
           - 凤梨通灵术:
-                - 自动 Config: docs/ppc/Config.md
-                - 合成表匹配: docs/ppc/MatchUtil.md
-          - 凤梨标签: docs/PTag.md
-          - WolfTailUI: docs/WUI.md
+                - 自动 Config: togocup/ppc/Config.md
+                - 合成表匹配: togocup/ppc/MatchUtil.md
+                - 简单容器: togocup/ppc/SimpleInventory.md
+          - 凤梨标签:
+                - 添加标签: togocup/tags/AddTags.md
+                - 使用标签: togocup/tags/UsingTags.md
+                - 使标签与矿物辞典兼容: togocup/tags/OreDict.md
+          - WolfTailUI:
+                - 吐司: togocup/wui/Toast.md
+                - UIStyle: togocup/wui/Style.md
+                - UIBased: togocup/wui/UI.md
     # - 回到凤梨田: https://wolf.snowlyicewolf.club/
 
 theme:
@@ -88,7 +104,6 @@ theme:
     language: zh
     features:
         - header.autohide
-        - navigation.footer
         - navigation.tabs
         - content.code.annotate
         - content.code.copy
