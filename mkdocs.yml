@@ -44,15 +44,11 @@ nav:
                 - HUD: gui/HUD.md
           - 事件:
                 - 事件，广播与订阅: event/Event.md
-                - 何时使用事件: event/InitEvent.md
-                - 可用事件一览: event/EventList.md
+                - 发送事件: event/InitEvent.md
           - 药水效果:
                 - 药水与准备工作: effect/ID.md
                 - 药水创建: effect/Effect.md
-          - 生物群系与结构体:
-                - 生物群系: biome/Biome.md
-                - 树与树苗: biome/Tree.md
-                - 结构: biome/Building.md
+          - 生物群系: Biome.md
           - 指令:
                 - 服务端上的指令: command/ServerCommand.md
                 - 客户端上的指令: command/ClientCommand.md
@@ -65,13 +61,14 @@ nav:
           - 方块:
                 - 分离注册的方块与方块物品: advanced/block/BlockItem.md
                 - 带有元数据的方块: advanced/block/MetaBlock.md
-
           - 生物:
                 - 生物与 AI: advanced/entity/Entity.md
                 - 生物渲染: advanced/entity/EntityRender.md
           - 世界:
+                - 树与树苗: advanced/world/Tree.md
                 - 世界装饰器: advanced/world/WorldGen.md
                 - 矿物生成: advanced/world/OreGen.md
+                - 结构: advanced/world/Struction.md
                 - 世界: advanced/world/World.md
           - 与常见模组联动:
                 - 兼容 NEI: advanced/lib/Nei.md
@@ -81,6 +78,14 @@ nav:
                 - 方块实体渲染器(BlockEntityRenderer): advanced/obj/TileRenderer.md
                 - GL11 与资源路径: advanced/obj/ObjRender.md
                 - 手持物品的渲染: advanced/obj/ItemObj.md
+          - Mixin 与 ASM:
+                - Mixin:
+                    - 注入回调器: advanced/mixin/Inject.md
+                    - 拓宽访问器: advanced/mixin/Access.md
+                    - 唯一修饰符: advanced/mixin/Unique.md
+                - ASM:
+                    - ASM 入门: advanced/asm/ASM.md
+                    - ASM 定位: advanced/asm/patch.md
     - 凤梨文档:
           - 欢迎使用 Pineapple TogoCups!: togocup/index.md
           - 凤梨通灵术:
