@@ -13,11 +13,10 @@ import java.util.Set;
 
 @SuppressWarnings("unused")
 public class InitBlocks {
-    // 这里是我们的注册表。
-    private static final Map<Block, String> BLOCKS = Maps.newLinkedHashMap();
-
     public static final Block EXAMPLE_BLOCK = new BlockExample();
     public static final Block EXAMPLE_TILE_BLOCK = new BlockExampleWithTile();
+    // 这里是我们的注册表。
+    private static final Map<Block, String> BLOCKS = Maps.newLinkedHashMap();
 
     // 在这里注册我们的方块。
     public static void registerBlock(String name, Block item) {

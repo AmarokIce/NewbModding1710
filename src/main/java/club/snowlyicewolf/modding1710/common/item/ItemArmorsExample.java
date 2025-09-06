@@ -11,7 +11,7 @@ public class ItemArmorsExample extends ItemArmor {
     public ItemArmorsExample(final int armorType) {
         super(InitMaterials.ARMOR_SCRAP, 0, armorType);
         String name = "example_armor_";
-        switch(armorType) {
+        switch (armorType) {
             case 0:
                 name += "helmet";
                 break;

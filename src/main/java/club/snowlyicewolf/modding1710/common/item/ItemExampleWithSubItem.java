@@ -13,9 +13,12 @@ import net.minecraft.util.IIcon;
 import java.util.List;
 
 public class ItemExampleWithSubItem extends Item {
-    @SideOnly(Side.CLIENT) private IIcon icon1;
-    @SideOnly(Side.CLIENT) private IIcon icon2;
-    @SideOnly(Side.CLIENT) private IIcon icon3;
+    @SideOnly(Side.CLIENT)
+    private IIcon icon1;
+    @SideOnly(Side.CLIENT)
+    private IIcon icon2;
+    @SideOnly(Side.CLIENT)
+    private IIcon icon3;
 
     public ItemExampleWithSubItem() {
         final String name = "example_item_with_sub_item";
@@ -57,11 +60,15 @@ public class ItemExampleWithSubItem extends Item {
     @SideOnly(Side.CLIENT)
     public IIcon getIconFromDamage(final int meta) {
         switch (meta) {
-            case 1: return this.icon1;
-            case 2: return this.icon2;
-            case 3: return this.icon3;
+            case 1:
+                return this.icon1;
+            case 2:
+                return this.icon2;
+            case 3:
+                return this.icon3;
             case 0:
-            default: return this.itemIcon;
+            default:
+                return this.itemIcon;
         }
     }
 }

@@ -20,7 +20,7 @@ public class ItemFoodExample extends ItemFood {
     private final PotionEffect[] potionEffects;
 
     public ItemFoodExample(final int amount, final float saturation, final boolean isWolfFood,
-                           final boolean fastEat, final boolean alwaysEatable, final PotionEffect ... effects) {
+                           final boolean fastEat, final boolean alwaysEatable, final PotionEffect... effects) {
         super(amount, saturation, isWolfFood);
 
         // 设置最大堆叠数量。
