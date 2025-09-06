@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../Armors/">
+        <link rel="prev" href="../GUI/">
       
       
-        <link rel="next" href="../MetaItem/">
+        <link rel="next" href="../../event/Event/">
       
       
       <link rel="icon" href="../../assets/ricon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>工具与防具材质 - NewbModding1710 - Minecraft Mod 1.7.10 开发教学</title>
+        <title>HUD - NewbModding1710 - Minecraft Mod 1.7.10 开发教学</title>
       
     
     
@@ -117,7 +117,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#hud" class="md-skip">
           跳转至
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              工具与防具材质
+              HUD
             
           </span>
         </div>
@@ -456,8 +456,6 @@
                 
   
   
-    
-  
   
   
     
@@ -468,11 +466,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
         
           
           <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
@@ -488,7 +486,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_4">
             <span class="md-nav__icon md-icon"></span>
             物品
@@ -502,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FirstItem/" class="md-nav__link">
+      <a href="../../item/FirstItem/" class="md-nav__link">
         
   
   
@@ -525,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ItemStack/" class="md-nav__link">
+      <a href="../../item/ItemStack/" class="md-nav__link">
         
   
   
@@ -548,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../TagGroup/" class="md-nav__link">
+      <a href="../../item/TagGroup/" class="md-nav__link">
         
   
   
@@ -571,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ItemFood/" class="md-nav__link">
+      <a href="../../item/ItemFood/" class="md-nav__link">
         
   
   
@@ -594,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ToolAndWeapon/" class="md-nav__link">
+      <a href="../../item/ToolAndWeapon/" class="md-nav__link">
         
   
   
@@ -617,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Armors/" class="md-nav__link">
+      <a href="../../item/Armors/" class="md-nav__link">
         
   
   
@@ -637,32 +635,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    工具与防具材质
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../item/Material/" class="md-nav__link">
         
   
   
@@ -673,44 +649,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      思考：如何注册材质
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      注册一个材质
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -723,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MetaItem/" class="md-nav__link">
+      <a href="../../item/MetaItem/" class="md-nav__link">
         
   
   
@@ -1197,6 +1135,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1207,11 +1147,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" checked>
         
           
           <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
@@ -1227,7 +1167,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_11">
             <span class="md-nav__icon md-icon"></span>
             UI 与 HUD
@@ -1241,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gui/GUI/" class="md-nav__link">
+      <a href="../GUI/" class="md-nav__link">
         
   
   
@@ -1261,10 +1201,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../gui/HUD/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1275,6 +1224,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -3089,32 +3039,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      思考：如何注册材质
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      注册一个材质
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3129,47 +3053,8 @@
 
 
 
-<h1 id="_1">工具与防具材质</h1>
-<p>在前两个章节中我们学习了如何创建一个工具、武器以及一套盔甲，但是我们都接触到了一个概念：材质。这个章节我们将要学习如何创建一个我们自己的材质。</p>
-<p><a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/init/InitMaterials.java"><strong>章节相关源码</strong></a></p>
-<h2 id="_2">思考：如何注册材质</h2>
-<p>我们在工具与武器章节中已经观察过 <code>ToolMaterial</code> 了，相信读者在编写盔甲时也应该已经观察过 <code>ArmorMaterial</code> 了。<br />
-细心的读者应该会发现，这些材质类都采用了枚举 <code>enum</code> 的方式创建。如果读者对 Java 有一定了解，那么应该知道 <code>enum</code> 是一个外部不可拓展的的特殊类型。<br />
-那我们应该如何注册它？答案是 <code>反射</code>。</p>
-<p>这是一种肮脏的概念，不过很幸运，Forge 已经为我们提供了工具，因此读者不会被复杂的底层概念与学习反射必备的知识吓跑。如果读者已经准备好起身逃跑——别忙，回来，坐下来。</p>
-<p>注入或修改 <code>enum</code> 通常不是一个好主意，这可能会导致较多问题。但 1.7.10 开发本身就是一件相对肮脏的体验，因此希望读者没有字节码洁癖。好吧，我们有些跑题了，总之先来看看这个特殊的类：<code>EnumHelper</code>。</p>
-<div class="highlight"><span class="filename">EnumHelper.class</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Class</span><span class="o">[][]</span><span class="w"> </span><span class="n">commonTypes</span><span class="w"> </span><span class="o">=</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p">{</span><span class="n">EnumAction</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span><span class="n">ArmorMaterial</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">{</span><span class="n">EnumArt</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">{</span><span class="n">EnumCreatureAttribute</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p">{</span><span class="n">EnumCreatureType</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">Class</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">Material</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="p">{</span><span class="n">Door</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">{</span><span class="n">EnumEnchantmentType</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">{</span><span class="n">EnumEntitySize</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">{</span><span class="n">Sensitivity</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p">{</span><span class="n">MovingObjectType</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="p">{</span><span class="n">EnumSkyBlock</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p">{</span><span class="n">EnumStatus</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="p">{</span><span class="n">ToolMaterial</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="na">class</span><span class="p">},</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">{</span><span class="n">EnumRarity</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">EnumChatFormatting</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">class</span><span class="p">}</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">};</span>
-</code></pre></div>
-<p>在 <code>commonTypes</code> 中的全部列出的枚举类都是我们将可以增加注册的部分。可以看到，我们可以增加注册 <code>ArmorMaterial</code> 与 <code>ToolMaterial</code>。  </p>
-<h2 id="_3">注册一个材质</h2>
-<p>我们一开始创建了一个物品，但是还没有任何用处。或许读者有很多想法，但我得坦白：我其实没想过那个物品要做什么。那么我就称它为废料吧！（当然，我也不知道为什么）<br />
-既然我们得到了废料，干脆就为我们的工具注册一个废料材质吧：</p>
-<div class="highlight"><span class="filename">IniteMetarial.java</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">InitMaterials</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">Item</span><span class="p">.</span><span class="na">ToolMaterial</span><span class="w"> </span><span class="n">TOOL_SCRAP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EnumHelper</span><span class="p">.</span><span class="na">addToolMaterial</span><span class="p">(</span><span class="s">&quot;scrap&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0F</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0F</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">);</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">ItemArmor</span><span class="p">.</span><span class="na">ArmorMaterial</span><span class="w"> </span><span class="n">ARMOR_SCRAP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EnumHelper</span><span class="p">.</span><span class="na">addArmorMaterial</span><span class="p">(</span><span class="s">&quot;scrap&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[]</span><span class="p">{</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="mi">18</span><span class="p">);</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
-</code></pre></div>
-<p>这样，我们就算是完成注册了一套材质，现在我们可以用于我们刚注册过的工具与盔甲了！</p>
-<div class="admonition success">
-<p class="admonition-title">由于工具与盔甲的材质并没有注册时机上的限制，因此可以不用写到主类呼叫——只需要直接调用即可！</p>
-</div>
+<h1 id="hud">HUD</h1>
+<p>还没开始做 :(</p>
 
 
 
