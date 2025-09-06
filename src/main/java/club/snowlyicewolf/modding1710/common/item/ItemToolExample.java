@@ -27,7 +27,7 @@ public class ItemToolExample extends Item {
     }
 
     @Override
-    public boolean itemInteractionForEntity(ItemStack pStack, EntityPlayer pPlayer, EntityLivingBase pEntity) {
+    public boolean itemInteractionForEntity(final ItemStack pStack, final EntityPlayer pPlayer, final EntityLivingBase pEntity) {
         // 如果不是僵尸就直接取消方法。
         if (!(pEntity instanceof EntityZombie)) {
             return false;
@@ -52,7 +52,7 @@ public class ItemToolExample extends Item {
 
     // 参数位分别代表当前物品的 ItemStack（可能是空的）,检查物品的玩家，介绍列表，是否显示高级数据（F3 + H）
     @Override
-    public void addInformation(@CheckForNull ItemStack pStack, EntityPlayer pPlayer,
+    public void addInformation(@CheckForNull final ItemStack pStack, final EntityPlayer pPlayer,
                                List pTooltipInfos, boolean pFlag) {
         pTooltipInfos.add(new ChatComponentTranslation("item.exampletool.info")
             .getFormattedText());

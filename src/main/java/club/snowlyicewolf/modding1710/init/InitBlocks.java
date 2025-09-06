@@ -1,6 +1,8 @@
 package club.snowlyicewolf.modding1710.init;
 
 import club.snowlyicewolf.modding1710.common.block.BlockExample;
+import club.snowlyicewolf.modding1710.common.block.BlockExampleWithTile;
+import club.snowlyicewolf.modding1710.common.tile.TileExample;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -15,6 +17,7 @@ public class InitBlocks {
     private static final Map<Block, String> BLOCKS = Maps.newLinkedHashMap();
 
     public static final Block EXAMPLE_BLOCK = new BlockExample();
+    public static final Block EXAMPLE_TILE_BLOCK = new BlockExampleWithTile();
 
     // 在这里注册我们的方块。
     public static void registerBlock(String name, Block item) {
@@ -33,5 +36,10 @@ public class InitBlocks {
     // 注册全部方块。
     public static void init() {
         BLOCKS.forEach(GameRegistry::registerBlock);
+        initTileEntity();
+    }
+
+    private static void initTileEntity() {
+        GameRegistry.registerTileEntity(TileExample.class, "example_tile");
     }
 }

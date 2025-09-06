@@ -23,13 +23,13 @@ public class ItemPickaxeExample extends ItemPickaxe {
 
     // 是否可以高效率的挖掘当前方块，返回 true 时为可以。
     @Override
-    public boolean func_150897_b(Block pBlock) {
+    public boolean func_150897_b(final Block pBlock) {
         return true;
     }
 
     // 设置挖掘速度。
     @Override
-    public float func_150893_a(ItemStack p_150893_1_, Block p_150893_2_) {
+    public float func_150893_a(final ItemStack p_150893_1_, final Block p_150893_2_) {
         return 10.0f;
     }
 }

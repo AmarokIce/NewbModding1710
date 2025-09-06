@@ -8,7 +8,7 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
 public class ItemArmorsExample extends ItemArmor {
-    public ItemArmorsExample(int armorType) {
+    public ItemArmorsExample(final int armorType) {
         super(InitMaterials.ARMOR_SCRAP, 0, armorType);
         String name = "example_armor_";
         switch(armorType) {
@@ -34,7 +34,7 @@ public class ItemArmorsExample extends ItemArmor {
     }
 
     @Override
-    public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+    public String getArmorTexture(final ItemStack stack, final Entity entity, final int slot, final String type) {
         return slot != 2
             ? ModMain.ID + ":textures/armors/example_armor_layer_1.png"
             : ModMain.ID + ":textures/armors/example_armor_layer_2.png";

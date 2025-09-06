@@ -29,7 +29,7 @@ public class ItemExampleWithSubItem extends Item {
 
     // 注册带元数据的 ItemStack。
     @Override
-    public void getSubItems(Item self, CreativeTabs tab, List list) {
+    public void getSubItems(final Item self, final CreativeTabs tab, final List list) {
         for (int i = 0; i < 4; i++) {
             list.add(new ItemStack(self, 1, i));
         }
@@ -37,14 +37,14 @@ public class ItemExampleWithSubItem extends Item {
 
     // 设定特殊的物品名称。
     @Override
-    public String getUnlocalizedName(ItemStack stack) {
+    public String getUnlocalizedName(final ItemStack stack) {
         return super.getUnlocalizedName(stack) + "_" + stack.getItemDamage();
     }
 
     // 注册我们的物品纹理。
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister register) {
+    public void registerIcons(final IIconRegister register) {
         super.registerIcons(register);
 
         icon1 = register.registerIcon(this.getIconString() + "_" + 1);
@@ -55,7 +55,7 @@ public class ItemExampleWithSubItem extends Item {
     // 获取我刚注册的物品纹理。
     @Override
     @SideOnly(Side.CLIENT)
-    public IIcon getIconFromDamage(int meta) {
+    public IIcon getIconFromDamage(final int meta) {
         switch (meta) {
             case 1: return this.icon1;
             case 2: return this.icon2;

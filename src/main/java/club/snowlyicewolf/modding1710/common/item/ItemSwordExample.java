@@ -22,7 +22,7 @@ public class ItemSwordExample extends ItemSword {
     }
 
     @Override
-    public boolean hitEntity(ItemStack pStack, EntityLivingBase pUser, EntityLivingBase pTarget) {
+    public boolean hitEntity(final ItemStack pStack, final EntityLivingBase pUser, final EntityLivingBase pTarget) {
         if (pTarget instanceof EntityPlayer && ((EntityPlayer) pTarget).capabilities.isCreativeMode) {
             return false;
         }

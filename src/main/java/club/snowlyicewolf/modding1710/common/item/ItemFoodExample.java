@@ -19,8 +19,8 @@ public class ItemFoodExample extends ItemFood {
     // 食用后获得的药水效果。
     private final PotionEffect[] potionEffects;
 
-    public ItemFoodExample(int amount, float saturation, boolean isWolfFood,
-                           boolean fastEat, boolean alwaysEatable, PotionEffect ... effects) {
+    public ItemFoodExample(final int amount, final float saturation, final boolean isWolfFood,
+                           final boolean fastEat, final boolean alwaysEatable, final PotionEffect ... effects) {
         super(amount, saturation, isWolfFood);
 
         // 设置最大堆叠数量。
@@ -45,20 +45,20 @@ public class ItemFoodExample extends ItemFood {
 
     // 设置我们的食用方式，是食用还是饮用。
     @Override
-    public EnumAction getItemUseAction(ItemStack pStack) {
+    public EnumAction getItemUseAction(final ItemStack pStack) {
         return EnumAction.eat;
     }
 
     // 设置食用（使用）的速度。
     @Override
-    public int getMaxItemUseDuration(ItemStack pStack) {
+    public int getMaxItemUseDuration(final ItemStack pStack) {
         // 使用刻，当我们设定了快速食用，那么就缩短一倍时间 —— 就像是在啃干海带那样快。
         return this.fastEat ? 16 : 32;
     }
 
     // 食用（使用）后。
     @Override
-    public ItemStack onEaten(ItemStack pStack, World pWorld, EntityPlayer pPlayer) {
+    public ItemStack onEaten(final ItemStack pStack, final World pWorld, final EntityPlayer pPlayer) {
         // 确定返回物品
         final ItemStack itemCraftingBack = new ItemStack(Items.bowl);
 
