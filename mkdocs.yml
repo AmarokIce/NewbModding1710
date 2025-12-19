@@ -15,43 +15,43 @@ nav:
           - 部分重要概念: Core.md
           - 主要类与代理: Mod.md
           - 物品:
-                - 第一个物品: item/FirstItem.md
-                - ItemStack: item/ItemStack.md
-                - 创造模式物品栏: item/TagGroup.md
-                - 创建一个食物: item/ItemFood.md
-                - 工具与武器: item/ToolAndWeapon.md
-                - 防具: item/Armors.md
-                - 工具与防具材质: item/Material.md
-                - 元数据区分的物品: item/MetaItem.md
+                - 第一个物品: common/item/FirstItem.md
+                - ItemStack: common/item/ItemStack.md
+                - 创造模式物品栏: common/item/TagGroup.md
+                - 创建一个食物: common/item/ItemFood.md
+                - 工具与武器: common/item/ToolAndWeapon.md
+                - 防具: common/item/Armors.md
+                - 工具与防具材质: common/item/Material.md
+                - 元数据区分的物品: common/item/MetaItem.md
           - 方块:
-                - 第一个方块: block/FirstBlock.md
-                - 方块朝向: block/BlockFacing.md
-                - 方块的特殊渲染: block/RenderBlock.md
+                - 第一个方块: common/block/FirstBlock.md
+                - 方块朝向: common/block/BlockFacing.md
+                - 方块的特殊渲染: common/block/RenderBlock.md
           - 方块实体:
-                - 方块与方块实体: tile/TileBlock.md
-                - 工作中方块: tile/WorkingBlock.md
-                - 数据同步与封包: tile/ProxyPacket.md
-          - 文本组件: ChatComponent.md
+                - 方块与方块实体: common/tile/TileBlock.md
+                - 工作中方块: common/tile/WorkingBlock.md
+                - 数据同步与封包: common/tile/ProxyPacket.md
+          - 文本组件: common/ChatComponent.md
           - 合成表与矿物辞典:
-                - 注册工作台合成表: craft/Crafting.md
-                - 注册熔炉合成表: craft/FurnaceCrafting.md
-                - 注册酿造合成表: craft/BrewingRecipe.md
-                - 矿物辞典与注册矿物辞典: craft/OreDict.md
-          - 生物伤害类型: DamageType.md
-          - 网络通讯: NetWork.md
+                - 注册工作台合成表: common/craft/Crafting.md
+                - 注册熔炉合成表: common/craft/FurnaceCrafting.md
+                - 注册酿造合成表: common/craft/BrewingRecipe.md
+                - 矿物辞典与注册矿物辞典: common/craft/OreDict.md
+          - 生物伤害类型: common/DamageType.md
+          - 网络通讯: common/NetWork.md
           - UI 与 HUD:
-                - GameUI: gui/GUI.md
-                - HUD: gui/HUD.md
+                - GameUI: common/gui/GUI.md
+                - HUD: common/gui/HUD.md
           - 事件:
-                - 事件，广播与订阅: event/Event.md
-                - 发送事件: event/InitEvent.md
+                - 事件，广播与订阅: common/event/Event.md
+                - 发送事件: common/event/InitEvent.md
           - 药水效果:
-                - 药水与准备工作: effect/ID.md
-                - 药水创建: effect/Effect.md
-          - 生物群系: Biome.md
+                - 药水与准备工作: common/effect/ID.md
+                - 药水创建: common/effect/Effect.md
+          - 生物群系: common/Biome.md
           - 指令:
-                - 服务端上的指令: command/ServerCommand.md
-                - 客户端上的指令: command/ClientCommand.md
+                - 服务端上的指令: common/command/ServerCommand.md
+                - 客户端上的指令: common/command/ClientCommand.md
     - 进阶开发:
           - 准备发车: advanced/index.md
           - 物品:

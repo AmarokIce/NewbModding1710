@@ -2,7 +2,8 @@
 
 过去的章节中我们学习了如何创建方块，这一章我们将要学习如何为方块搭配一个方块实体。
 
-[**章节相关源码: 创建**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/tile/TileExample.java)  
+[**章节相关源码: 创建方块实体**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/tile/TileExample.java)  
+[**章节相关源码: 创建方块**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/block/BlockExampleWithTile.java)  
 [**章节相关源码: 注册**](https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/init/InitBlocks.java)
 
 ## 什么是方块实体
