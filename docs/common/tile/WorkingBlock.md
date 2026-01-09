@@ -41,7 +41,7 @@ public void updateEntity() {
 }
 ```
 
-??? question 为什么我们不在客户端更新？
+??? question "为什么我们不在客户端更新？"
     通常我们的数据需要在逻辑服务端工作，请把这一点记作一种常识并在开发时经常想起：你的大部分数据都应该在逻辑服务端处理与验证，而不是留给客户端。  
     必要时，我们通过封包联络客户端。如果没有必要，务必不要直接在客户端执行它们！
 
@@ -49,6 +49,7 @@ public void updateEntity() {
 
 ```java title="TileSunFurnace.java"
 @Nullable private ItemStack itemInFurnace;
+
 public TileSunFurnace(final World world, final int meta) {
     this.setWorldObj(world);
     this.blockMetadata = meta;
@@ -101,7 +102,7 @@ public ItemStack popItemInFurnace() {
 }
 ```
 
-??? 为什么 getItemStack 需要拷贝？
+??? "为什么 `getItemStack` 需要拷贝？"
     任何需要操作物品的情况都不应该直接干涉容器内的物品，大部分情况下这是不必要的——如果有这样的需要，我们应该创建单独的方法去处理它们。  
     在任何 Java 开发中都应该做到避免让其他对象直接访问当前对象的成员，因为外部对象的操作都是不可控且未知的，尤其是对于 1.7.10 这样已经非常黑暗的版本。
 
@@ -227,9 +228,65 @@ public class TileSunFurnace extends TileEntity {
 }
 ```
 
-我们完成了方块实体的部分，现在再来完善方块部分。细节就不在过多赘述，读者可以尝试通过注解来理解具体要做的内容：
+我们完成了方块实体的部分，现在再来完善方块部分。细节就不在过多赘述，读者可以尝试独自理解要做的内容：
 
-// TODO
-```
+```java title="BlockSunFurnace.java"
+public class BlockSunFurnace extends BlockContainer {
+    public BlockSunFurnace() {
+        super(Material.iron);
+
+        final String name = "sun_furnace";
+
+        this.setBlockName(name);
+        this.setBlockTextureName(ModMain.ID + ":" + name);
+        this.setCreativeTab(ModMain.TAB);
+
+        this.setHardness(1.0F);
+
+        InitBlocks.registerBlock(name, this);
+    }
+
+    @Override
+    public boolean onBlockActivated(World pWorld, int pPosX, int pPosY, int pPosZ,
+                                    EntityPlayer pUser, int pFace, float pHitX,
+                                    float pHitY, float pHitZ) {
+        super.onBlockActivated(pWorld, pPosX, pPosY, pPosZ, pUser, pFace, pHitX, pHitY, pHitZ);
+
+        final TileEntity te = pWorld.getTileEntity(pPosX, pPosY, pPosZ);
+        if (!(te instanceof TileSunFurnace)) {
+            return false;
+        }
+
+        final TileSunFurnace tile = (TileSunFurnace) te;
+
+        // 如果玩家手持物品且不是蹲下状态。
+        if (Objects.nonNull(pUser.getHeldItem()) && !pUser.isSneaking()) {
+            if (Objects.nonNull(tile.getItemInFurnace())) {
+                return false;
+            }
+
+            // 因为方法内已经拷贝过了，因此我们不需要拷贝。否则此处应该拷贝 ItemStack。
+            tile.setItemInFurnace(pUser.getHeldItem());
+            pUser.getHeldItem().stackSize--;
+            return true;
+        }
+
+        final ItemStack item = tile.popItemInFurnace();
+        if (Objects.isNull(item)) {
+            return true;
+        }
+
+        // 生成一个物品，重置可捡起的时间 CD，然后生成到世界。
+        final EntityItem entityItem = new EntityItem(pWorld, pPosX, pPosY + 0.6, pPosZ, item);
+        entityItem.delayBeforeCanPickup = 0;
+        pWorld.spawnEntityInWorld(entityItem);
+        return true;
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World pWorld, int pMeta) {
+        return new TileSunFurnace(pWorld, pMeta);
+    }
+}
 
 ```
