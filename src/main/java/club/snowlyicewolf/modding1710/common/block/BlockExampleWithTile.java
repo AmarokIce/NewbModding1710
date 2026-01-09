@@ -41,13 +41,13 @@ public class BlockExampleWithTile extends BlockContainer {
         }
 
         // 检查 TileEntity 是否为我们需要的，为了避免任何意外。每次采取 TileEntity 时都应该注意检查。
-        final TileEntity tileEntity = pWorld.getTileEntity(pPosX, pPosY, pPosZ);
-        if (!(tileEntity instanceof TileExample)) {
+        final TileEntity te = pWorld.getTileEntity(pPosX, pPosY, pPosZ);
+        if (!(te instanceof TileExample)) {
             return false;
         }
 
         // 投射过去。
-        final TileExample tile = (TileExample) tileEntity;
+        final TileExample tile = (TileExample) te;
         tile.addCount();
 
         // 输出我们的消息

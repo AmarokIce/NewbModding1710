@@ -2,7 +2,9 @@ package club.snowlyicewolf.modding1710.init;
 
 import club.snowlyicewolf.modding1710.common.block.BlockExample;
 import club.snowlyicewolf.modding1710.common.block.BlockExampleWithTile;
+import club.snowlyicewolf.modding1710.common.block.BlockSunFurnace;
 import club.snowlyicewolf.modding1710.common.tile.TileExample;
+import club.snowlyicewolf.modding1710.common.tile.TileSunFurnace;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -15,6 +17,7 @@ import java.util.Set;
 public class InitBlocks {
     public static final Block EXAMPLE_BLOCK = new BlockExample();
     public static final Block EXAMPLE_TILE_BLOCK = new BlockExampleWithTile();
+    public static final Block TILE_SUN_FURNACE = new BlockSunFurnace();
     // 这里是我们的注册表。
     private static final Map<Block, String> BLOCKS = Maps.newLinkedHashMap();
 
@@ -40,5 +43,6 @@ public class InitBlocks {
 
     private static void initTileEntity() {
         GameRegistry.registerTileEntity(TileExample.class, "example_tile");
+        GameRegistry.registerTileEntity(TileSunFurnace.class, "sun_furnace");
     }
 }
