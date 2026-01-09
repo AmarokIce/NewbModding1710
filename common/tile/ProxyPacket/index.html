@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="../WorkingBlock/">
       
       
-      <link rel="icon" href="/assets/ricon.png">
+        <link rel="next" href="../../ChatComponent/">
+      
+      
+      <link rel="icon" href="../../../assets/ricon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>NewbModding1710 - Minecraft Mod 1.7.10 开发教学</title>
+        <title>数据同步与封包 - NewbModding1710 - Minecraft Mod 1.7.10 开发教学</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -87,7 +91,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -112,6 +116,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -122,9 +131,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-header__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
+    <a href="../../.." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-header__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
       
-  <img src="/assets/ricon.png" alt="logo">
+  <img src="../../../assets/ricon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -141,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              数据同步与封包
             
           </span>
         </div>
@@ -238,11 +247,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/." class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../.." class="md-tabs__link">
           
   
   
@@ -262,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/advanced/" class="md-tabs__link">
+        <a href="../../../advanced/" class="md-tabs__link">
           
   
   
@@ -282,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/togocup/" class="md-tabs__link">
+        <a href="../../../togocup/" class="md-tabs__link">
           
   
   
@@ -316,9 +327,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-nav__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
+    <a href="../../.." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-nav__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
       
-  <img src="/assets/ricon.png" alt="logo">
+  <img src="../../../assets/ricon.png" alt="logo">
 
     </a>
     NewbModding1710 - Minecraft Mod 1.7.10 开发教学
@@ -330,24 +341,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   
@@ -360,7 +376,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             入门开发
@@ -374,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -397,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Core/" class="md-nav__link">
+      <a href="../../../Core/" class="md-nav__link">
         
   
   
@@ -420,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Mod/" class="md-nav__link">
+      <a href="../../../Mod/" class="md-nav__link">
         
   
   
@@ -484,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/FirstItem/" class="md-nav__link">
+      <a href="../../item/FirstItem/" class="md-nav__link">
         
   
   
@@ -507,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/ItemStack/" class="md-nav__link">
+      <a href="../../item/ItemStack/" class="md-nav__link">
         
   
   
@@ -530,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/TagGroup/" class="md-nav__link">
+      <a href="../../item/TagGroup/" class="md-nav__link">
         
   
   
@@ -553,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/ItemFood/" class="md-nav__link">
+      <a href="../../item/ItemFood/" class="md-nav__link">
         
   
   
@@ -576,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/ToolAndWeapon/" class="md-nav__link">
+      <a href="../../item/ToolAndWeapon/" class="md-nav__link">
         
   
   
@@ -599,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/Armors/" class="md-nav__link">
+      <a href="../../item/Armors/" class="md-nav__link">
         
   
   
@@ -622,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/Material/" class="md-nav__link">
+      <a href="../../item/Material/" class="md-nav__link">
         
   
   
@@ -645,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/MetaItem/" class="md-nav__link">
+      <a href="../../item/MetaItem/" class="md-nav__link">
         
   
   
@@ -717,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/block/FirstBlock/" class="md-nav__link">
+      <a href="../../block/FirstBlock/" class="md-nav__link">
         
   
   
@@ -740,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/block/BlockFacing/" class="md-nav__link">
+      <a href="../../block/BlockFacing/" class="md-nav__link">
         
   
   
@@ -763,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/block/RenderBlock/" class="md-nav__link">
+      <a href="../../block/RenderBlock/" class="md-nav__link">
         
   
   
@@ -791,6 +807,8 @@
                 
   
   
+    
+  
   
   
     
@@ -801,11 +819,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" checked>
         
           
           <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
@@ -821,7 +839,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_6">
             <span class="md-nav__icon md-icon"></span>
             方块实体
@@ -835,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/tile/TileBlock/" class="md-nav__link">
+      <a href="../TileBlock/" class="md-nav__link">
         
   
   
@@ -858,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/tile/WorkingBlock/" class="md-nav__link">
+      <a href="../WorkingBlock/" class="md-nav__link">
         
   
   
@@ -878,10 +896,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/common/tile/ProxyPacket/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -892,6 +919,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -912,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/ChatComponent/" class="md-nav__link">
+      <a href="../../ChatComponent/" class="md-nav__link">
         
   
   
@@ -976,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/Crafting/" class="md-nav__link">
+      <a href="../../craft/Crafting/" class="md-nav__link">
         
   
   
@@ -999,7 +1027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/FurnaceCrafting/" class="md-nav__link">
+      <a href="../../craft/FurnaceCrafting/" class="md-nav__link">
         
   
   
@@ -1022,7 +1050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/BrewingRecipe/" class="md-nav__link">
+      <a href="../../craft/BrewingRecipe/" class="md-nav__link">
         
   
   
@@ -1045,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/OreDict/" class="md-nav__link">
+      <a href="../../craft/OreDict/" class="md-nav__link">
         
   
   
@@ -1076,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/DamageType/" class="md-nav__link">
+      <a href="../../DamageType/" class="md-nav__link">
         
   
   
@@ -1099,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/NetWork/" class="md-nav__link">
+      <a href="../../NetWork/" class="md-nav__link">
         
   
   
@@ -1163,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/gui/GUI/" class="md-nav__link">
+      <a href="../../gui/GUI/" class="md-nav__link">
         
   
   
@@ -1186,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/gui/HUD/" class="md-nav__link">
+      <a href="../../gui/HUD/" class="md-nav__link">
         
   
   
@@ -1258,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/event/Event/" class="md-nav__link">
+      <a href="../../event/Event/" class="md-nav__link">
         
   
   
@@ -1281,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/event/InitEvent/" class="md-nav__link">
+      <a href="../../event/InitEvent/" class="md-nav__link">
         
   
   
@@ -1353,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/effect/ID/" class="md-nav__link">
+      <a href="../../effect/ID/" class="md-nav__link">
         
   
   
@@ -1376,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/effect/Effect/" class="md-nav__link">
+      <a href="../../effect/Effect/" class="md-nav__link">
         
   
   
@@ -1407,7 +1435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/Biome.md" class="md-nav__link">
+      <a href="../../Biome.md" class="md-nav__link">
         
   
   
@@ -1471,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/command/ServerCommand/" class="md-nav__link">
+      <a href="../../command/ServerCommand/" class="md-nav__link">
         
   
   
@@ -1494,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/command/ClientCommand/" class="md-nav__link">
+      <a href="../../command/ClientCommand/" class="md-nav__link">
         
   
   
@@ -1573,7 +1601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/" class="md-nav__link">
+      <a href="../../../advanced/" class="md-nav__link">
         
   
   
@@ -1637,7 +1665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/item/MagicItem.md" class="md-nav__link">
+      <a href="../../../advanced/item/MagicItem.md" class="md-nav__link">
         
   
   
@@ -1660,7 +1688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/item/NbtItem.md" class="md-nav__link">
+      <a href="../../../advanced/item/NbtItem.md" class="md-nav__link">
         
   
   
@@ -1683,7 +1711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/item/WalletItem.md" class="md-nav__link">
+      <a href="../../../advanced/item/WalletItem.md" class="md-nav__link">
         
   
   
@@ -1755,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/block/BlockItem.md" class="md-nav__link">
+      <a href="../../../advanced/block/BlockItem.md" class="md-nav__link">
         
   
   
@@ -1778,7 +1806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/block/MetaBlock.md" class="md-nav__link">
+      <a href="../../../advanced/block/MetaBlock.md" class="md-nav__link">
         
   
   
@@ -1850,7 +1878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/entity/Entity.md" class="md-nav__link">
+      <a href="../../../advanced/entity/Entity.md" class="md-nav__link">
         
   
   
@@ -1873,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/entity/EntityRender.md" class="md-nav__link">
+      <a href="../../../advanced/entity/EntityRender.md" class="md-nav__link">
         
   
   
@@ -1945,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/Tree.md" class="md-nav__link">
+      <a href="../../../advanced/world/Tree.md" class="md-nav__link">
         
   
   
@@ -1968,7 +1996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/WorldGen.md" class="md-nav__link">
+      <a href="../../../advanced/world/WorldGen.md" class="md-nav__link">
         
   
   
@@ -1991,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/OreGen.md" class="md-nav__link">
+      <a href="../../../advanced/world/OreGen.md" class="md-nav__link">
         
   
   
@@ -2014,7 +2042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/Struction.md" class="md-nav__link">
+      <a href="../../../advanced/world/Struction.md" class="md-nav__link">
         
   
   
@@ -2037,7 +2065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/World.md" class="md-nav__link">
+      <a href="../../../advanced/world/World.md" class="md-nav__link">
         
   
   
@@ -2109,7 +2137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/lib/Nei.md" class="md-nav__link">
+      <a href="../../../advanced/lib/Nei.md" class="md-nav__link">
         
   
   
@@ -2132,7 +2160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/lib/Waila.md" class="md-nav__link">
+      <a href="../../../advanced/lib/Waila.md" class="md-nav__link">
         
   
   
@@ -2155,7 +2183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/lib/GeoModel.md" class="md-nav__link">
+      <a href="../../../advanced/lib/GeoModel.md" class="md-nav__link">
         
   
   
@@ -2227,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/obj/TileRenderer.md" class="md-nav__link">
+      <a href="../../../advanced/obj/TileRenderer.md" class="md-nav__link">
         
   
   
@@ -2250,7 +2278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/obj/ObjRender.md" class="md-nav__link">
+      <a href="../../../advanced/obj/ObjRender.md" class="md-nav__link">
         
   
   
@@ -2273,7 +2301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/obj/ItemObj.md" class="md-nav__link">
+      <a href="../../../advanced/obj/ItemObj.md" class="md-nav__link">
         
   
   
@@ -2386,7 +2414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mixin/Inject.md" class="md-nav__link">
+      <a href="../../../advanced/mixin/Inject.md" class="md-nav__link">
         
   
   
@@ -2409,7 +2437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mixin/Access.md" class="md-nav__link">
+      <a href="../../../advanced/mixin/Access.md" class="md-nav__link">
         
   
   
@@ -2432,7 +2460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mixin/Unique.md" class="md-nav__link">
+      <a href="../../../advanced/mixin/Unique.md" class="md-nav__link">
         
   
   
@@ -2504,7 +2532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/asm/ASM.md" class="md-nav__link">
+      <a href="../../../advanced/asm/ASM.md" class="md-nav__link">
         
   
   
@@ -2527,7 +2555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/asm/patch.md" class="md-nav__link">
+      <a href="../../../advanced/asm/patch.md" class="md-nav__link">
         
   
   
@@ -2614,7 +2642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/" class="md-nav__link">
+      <a href="../../../togocup/" class="md-nav__link">
         
   
   
@@ -2678,7 +2706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/ppc/Config.md" class="md-nav__link">
+      <a href="../../../togocup/ppc/Config.md" class="md-nav__link">
         
   
   
@@ -2701,7 +2729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/ppc/MatchUtil.md" class="md-nav__link">
+      <a href="../../../togocup/ppc/MatchUtil.md" class="md-nav__link">
         
   
   
@@ -2724,7 +2752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/ppc/SimpleInventory.md" class="md-nav__link">
+      <a href="../../../togocup/ppc/SimpleInventory.md" class="md-nav__link">
         
   
   
@@ -2796,7 +2824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/tags/AddTags.md" class="md-nav__link">
+      <a href="../../../togocup/tags/AddTags.md" class="md-nav__link">
         
   
   
@@ -2819,7 +2847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/tags/UsingTags.md" class="md-nav__link">
+      <a href="../../../togocup/tags/UsingTags.md" class="md-nav__link">
         
   
   
@@ -2842,7 +2870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/tags/OreDict.md" class="md-nav__link">
+      <a href="../../../togocup/tags/OreDict.md" class="md-nav__link">
         
   
   
@@ -2914,7 +2942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/wui/Toast.md" class="md-nav__link">
+      <a href="../../../togocup/wui/Toast.md" class="md-nav__link">
         
   
   
@@ -2937,7 +2965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/wui/Style.md" class="md-nav__link">
+      <a href="../../../togocup/wui/Style.md" class="md-nav__link">
         
   
   
@@ -2960,7 +2988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/wui/UI.md" class="md-nav__link">
+      <a href="../../../togocup/wui/UI.md" class="md-nav__link">
         
   
   
@@ -3008,6 +3036,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -3019,8 +3049,25 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="_1">数据同步与封包</h1>
+<p>还没开始做 :(</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -3067,10 +3114,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["header.autohide", "navigation.tabs", "content.code.annotate", "content.code.copy"], "search": "/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.tabs", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

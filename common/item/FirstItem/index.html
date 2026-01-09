@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="../../../Mod/">
       
       
-      <link rel="icon" href="/assets/ricon.png">
+        <link rel="next" href="../ItemStack/">
+      
+      
+      <link rel="icon" href="../../../assets/ricon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>NewbModding1710 - Minecraft Mod 1.7.10 开发教学</title>
+        <title>第一个物品 - NewbModding1710 - Minecraft Mod 1.7.10 开发教学</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -87,7 +91,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -112,6 +116,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -122,9 +131,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-header__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
+    <a href="../../.." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-header__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
       
-  <img src="/assets/ricon.png" alt="logo">
+  <img src="../../../assets/ricon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -141,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              第一个物品
             
           </span>
         </div>
@@ -238,11 +247,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/." class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../.." class="md-tabs__link">
           
   
   
@@ -262,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/advanced/" class="md-tabs__link">
+        <a href="../../../advanced/" class="md-tabs__link">
           
   
   
@@ -282,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/togocup/" class="md-tabs__link">
+        <a href="../../../togocup/" class="md-tabs__link">
           
   
   
@@ -316,9 +327,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-nav__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
+    <a href="../../.." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-nav__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
       
-  <img src="/assets/ricon.png" alt="logo">
+  <img src="../../../assets/ricon.png" alt="logo">
 
     </a>
     NewbModding1710 - Minecraft Mod 1.7.10 开发教学
@@ -330,24 +341,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   
@@ -360,7 +376,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             入门开发
@@ -374,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -397,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Core/" class="md-nav__link">
+      <a href="../../../Core/" class="md-nav__link">
         
   
   
@@ -420,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Mod/" class="md-nav__link">
+      <a href="../../../Mod/" class="md-nav__link">
         
   
   
@@ -440,6 +456,8 @@
                 
   
   
+    
+  
   
   
     
@@ -450,11 +468,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" checked>
         
           
           <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
@@ -470,7 +488,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_4">
             <span class="md-nav__icon md-icon"></span>
             物品
@@ -481,10 +499,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/common/item/FirstItem/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第一个物品
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -495,6 +535,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建一个物品
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="资源文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      语言文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      纹理文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -507,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/ItemStack/" class="md-nav__link">
+      <a href="../ItemStack/" class="md-nav__link">
         
   
   
@@ -530,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/TagGroup/" class="md-nav__link">
+      <a href="../TagGroup/" class="md-nav__link">
         
   
   
@@ -553,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/ItemFood/" class="md-nav__link">
+      <a href="../ItemFood/" class="md-nav__link">
         
   
   
@@ -576,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/ToolAndWeapon/" class="md-nav__link">
+      <a href="../ToolAndWeapon/" class="md-nav__link">
         
   
   
@@ -599,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/Armors/" class="md-nav__link">
+      <a href="../Armors/" class="md-nav__link">
         
   
   
@@ -622,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/Material/" class="md-nav__link">
+      <a href="../Material/" class="md-nav__link">
         
   
   
@@ -645,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/MetaItem/" class="md-nav__link">
+      <a href="../MetaItem/" class="md-nav__link">
         
   
   
@@ -717,7 +819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/block/FirstBlock/" class="md-nav__link">
+      <a href="../../block/FirstBlock/" class="md-nav__link">
         
   
   
@@ -740,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/block/BlockFacing/" class="md-nav__link">
+      <a href="../../block/BlockFacing/" class="md-nav__link">
         
   
   
@@ -763,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/block/RenderBlock/" class="md-nav__link">
+      <a href="../../block/RenderBlock/" class="md-nav__link">
         
   
   
@@ -835,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/tile/TileBlock/" class="md-nav__link">
+      <a href="../../tile/TileBlock/" class="md-nav__link">
         
   
   
@@ -858,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/tile/WorkingBlock/" class="md-nav__link">
+      <a href="../../tile/WorkingBlock/" class="md-nav__link">
         
   
   
@@ -881,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/tile/ProxyPacket/" class="md-nav__link">
+      <a href="../../tile/ProxyPacket/" class="md-nav__link">
         
   
   
@@ -912,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/ChatComponent/" class="md-nav__link">
+      <a href="../../ChatComponent/" class="md-nav__link">
         
   
   
@@ -976,7 +1078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/Crafting/" class="md-nav__link">
+      <a href="../../craft/Crafting/" class="md-nav__link">
         
   
   
@@ -999,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/FurnaceCrafting/" class="md-nav__link">
+      <a href="../../craft/FurnaceCrafting/" class="md-nav__link">
         
   
   
@@ -1022,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/BrewingRecipe/" class="md-nav__link">
+      <a href="../../craft/BrewingRecipe/" class="md-nav__link">
         
   
   
@@ -1045,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/OreDict/" class="md-nav__link">
+      <a href="../../craft/OreDict/" class="md-nav__link">
         
   
   
@@ -1076,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/DamageType/" class="md-nav__link">
+      <a href="../../DamageType/" class="md-nav__link">
         
   
   
@@ -1099,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/NetWork/" class="md-nav__link">
+      <a href="../../NetWork/" class="md-nav__link">
         
   
   
@@ -1163,7 +1265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/gui/GUI/" class="md-nav__link">
+      <a href="../../gui/GUI/" class="md-nav__link">
         
   
   
@@ -1186,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/gui/HUD/" class="md-nav__link">
+      <a href="../../gui/HUD/" class="md-nav__link">
         
   
   
@@ -1258,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/event/Event/" class="md-nav__link">
+      <a href="../../event/Event/" class="md-nav__link">
         
   
   
@@ -1281,7 +1383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/event/InitEvent/" class="md-nav__link">
+      <a href="../../event/InitEvent/" class="md-nav__link">
         
   
   
@@ -1353,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/effect/ID/" class="md-nav__link">
+      <a href="../../effect/ID/" class="md-nav__link">
         
   
   
@@ -1376,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/effect/Effect/" class="md-nav__link">
+      <a href="../../effect/Effect/" class="md-nav__link">
         
   
   
@@ -1407,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/Biome.md" class="md-nav__link">
+      <a href="../../Biome.md" class="md-nav__link">
         
   
   
@@ -1471,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/command/ServerCommand/" class="md-nav__link">
+      <a href="../../command/ServerCommand/" class="md-nav__link">
         
   
   
@@ -1494,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/command/ClientCommand/" class="md-nav__link">
+      <a href="../../command/ClientCommand/" class="md-nav__link">
         
   
   
@@ -1573,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/" class="md-nav__link">
+      <a href="../../../advanced/" class="md-nav__link">
         
   
   
@@ -1637,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/item/MagicItem.md" class="md-nav__link">
+      <a href="../../../advanced/item/MagicItem.md" class="md-nav__link">
         
   
   
@@ -1660,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/item/NbtItem.md" class="md-nav__link">
+      <a href="../../../advanced/item/NbtItem.md" class="md-nav__link">
         
   
   
@@ -1683,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/item/WalletItem.md" class="md-nav__link">
+      <a href="../../../advanced/item/WalletItem.md" class="md-nav__link">
         
   
   
@@ -1755,7 +1857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/block/BlockItem.md" class="md-nav__link">
+      <a href="../../../advanced/block/BlockItem.md" class="md-nav__link">
         
   
   
@@ -1778,7 +1880,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/block/MetaBlock.md" class="md-nav__link">
+      <a href="../../../advanced/block/MetaBlock.md" class="md-nav__link">
         
   
   
@@ -1850,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/entity/Entity.md" class="md-nav__link">
+      <a href="../../../advanced/entity/Entity.md" class="md-nav__link">
         
   
   
@@ -1873,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/entity/EntityRender.md" class="md-nav__link">
+      <a href="../../../advanced/entity/EntityRender.md" class="md-nav__link">
         
   
   
@@ -1945,7 +2047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/Tree.md" class="md-nav__link">
+      <a href="../../../advanced/world/Tree.md" class="md-nav__link">
         
   
   
@@ -1968,7 +2070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/WorldGen.md" class="md-nav__link">
+      <a href="../../../advanced/world/WorldGen.md" class="md-nav__link">
         
   
   
@@ -1991,7 +2093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/OreGen.md" class="md-nav__link">
+      <a href="../../../advanced/world/OreGen.md" class="md-nav__link">
         
   
   
@@ -2014,7 +2116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/Struction.md" class="md-nav__link">
+      <a href="../../../advanced/world/Struction.md" class="md-nav__link">
         
   
   
@@ -2037,7 +2139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/World.md" class="md-nav__link">
+      <a href="../../../advanced/world/World.md" class="md-nav__link">
         
   
   
@@ -2109,7 +2211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/lib/Nei.md" class="md-nav__link">
+      <a href="../../../advanced/lib/Nei.md" class="md-nav__link">
         
   
   
@@ -2132,7 +2234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/lib/Waila.md" class="md-nav__link">
+      <a href="../../../advanced/lib/Waila.md" class="md-nav__link">
         
   
   
@@ -2155,7 +2257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/lib/GeoModel.md" class="md-nav__link">
+      <a href="../../../advanced/lib/GeoModel.md" class="md-nav__link">
         
   
   
@@ -2227,7 +2329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/obj/TileRenderer.md" class="md-nav__link">
+      <a href="../../../advanced/obj/TileRenderer.md" class="md-nav__link">
         
   
   
@@ -2250,7 +2352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/obj/ObjRender.md" class="md-nav__link">
+      <a href="../../../advanced/obj/ObjRender.md" class="md-nav__link">
         
   
   
@@ -2273,7 +2375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/obj/ItemObj.md" class="md-nav__link">
+      <a href="../../../advanced/obj/ItemObj.md" class="md-nav__link">
         
   
   
@@ -2386,7 +2488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mixin/Inject.md" class="md-nav__link">
+      <a href="../../../advanced/mixin/Inject.md" class="md-nav__link">
         
   
   
@@ -2409,7 +2511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mixin/Access.md" class="md-nav__link">
+      <a href="../../../advanced/mixin/Access.md" class="md-nav__link">
         
   
   
@@ -2432,7 +2534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mixin/Unique.md" class="md-nav__link">
+      <a href="../../../advanced/mixin/Unique.md" class="md-nav__link">
         
   
   
@@ -2504,7 +2606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/asm/ASM.md" class="md-nav__link">
+      <a href="../../../advanced/asm/ASM.md" class="md-nav__link">
         
   
   
@@ -2527,7 +2629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/asm/patch.md" class="md-nav__link">
+      <a href="../../../advanced/asm/patch.md" class="md-nav__link">
         
   
   
@@ -2614,7 +2716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/" class="md-nav__link">
+      <a href="../../../togocup/" class="md-nav__link">
         
   
   
@@ -2678,7 +2780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/ppc/Config.md" class="md-nav__link">
+      <a href="../../../togocup/ppc/Config.md" class="md-nav__link">
         
   
   
@@ -2701,7 +2803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/ppc/MatchUtil.md" class="md-nav__link">
+      <a href="../../../togocup/ppc/MatchUtil.md" class="md-nav__link">
         
   
   
@@ -2724,7 +2826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/ppc/SimpleInventory.md" class="md-nav__link">
+      <a href="../../../togocup/ppc/SimpleInventory.md" class="md-nav__link">
         
   
   
@@ -2796,7 +2898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/tags/AddTags.md" class="md-nav__link">
+      <a href="../../../togocup/tags/AddTags.md" class="md-nav__link">
         
   
   
@@ -2819,7 +2921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/tags/UsingTags.md" class="md-nav__link">
+      <a href="../../../togocup/tags/UsingTags.md" class="md-nav__link">
         
   
   
@@ -2842,7 +2944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/tags/OreDict.md" class="md-nav__link">
+      <a href="../../../togocup/tags/OreDict.md" class="md-nav__link">
         
   
   
@@ -2914,7 +3016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/wui/Toast.md" class="md-nav__link">
+      <a href="../../../togocup/wui/Toast.md" class="md-nav__link">
         
   
   
@@ -2937,7 +3039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/wui/Style.md" class="md-nav__link">
+      <a href="../../../togocup/wui/Style.md" class="md-nav__link">
         
   
   
@@ -2960,7 +3062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/wui/UI.md" class="md-nav__link">
+      <a href="../../../togocup/wui/UI.md" class="md-nav__link">
         
   
   
@@ -3008,6 +3110,58 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建一个物品
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源文件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="资源文件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      语言文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      纹理文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3019,8 +3173,82 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="_1">第一个物品</h1>
+<p>这一章节我们将会创建我们在 1.7.10 模组开发中的第一个物品。</p>
+<p><a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/item/ItemExample.java"><strong>章节相关源码: 创建</strong></a><br />
+<a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/init/InitItems.java"><strong>章节相关源码: 注册</strong></a></p>
+<h2 id="_2">创建一个物品</h2>
+<p>在<a href="../core.md">重要概念</a>中我们了解过了物品与方块的注册, 那么现在我们就可以来制作一些属于我们的物品了!
+首先回到工作区, 创建类 <code>ItemExample</code>, 并继承 <code>Item</code>, 看起来就像这样：</p>
+<div class="highlight"><span class="filename">ItemExample.java</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ItemExample</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="c1">// Code ...</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</code></pre></div>
+<p>这样, 第一个 Item 就完成了!没错, 就这么简单!但是, 我们还有些事情要做, 让我们为它创建构造方法并提交本地化名称 (<code>UnlocalizedName</code>) 与纹理名称 (<code>TextureName</code>)。</p>
+<div class="highlight"><span class="filename">ItemExample.java</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ItemExample</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Item</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ItemExample</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;example_item&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="c1">// 设置本地化键。</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setUnlocalizedName</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="c1">// 设置贴图资源。</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setTextureName</span><span class="p">(</span><span class="n">ModMain</span><span class="p">.</span><span class="na">ID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div>
+<p>最后, 再用一个我们喜欢的方式来注册它, 一切完成！现在我们可以用指令 <code>give</code> 获取我们刚才创建的物品：</p>
+<p><img alt="我们第一个物品！" src="../../assets/item/FirstItem_P0.png" /></p>
+<p>不过此时，我们手上的还是黑紫方块。虽然我们设置了纹理名称，但是我们还没加入纹理。接下来我们加入一些资源文件让它看起来很好。</p>
+<h2 id="_3">资源文件</h2>
+<h3 id="_4">语言文件</h3>
+<p>现在, 让我们进入 resources 文件夹, 创建文件夹 <code>assets/读者的 ModID/</code> , 再分别创建文件夹 <code>lang</code> 和 <code>textures/items/</code>。
+在 <code>lang</code> 文件夹中创建文件 <code>en_US.lang</code> 与 <code>zh_CN.lang</code>, 这两份文件就是我们的语言文件了, 而其名称着对应国家语言缩写。</p>
+<blockquote>
+<p><strong>lang 文件的语法约定:</strong>
+lang 文件中, 对于物品, 其键值为 <code>item.本地化名.name</code>, 而方块为 <code>tile.本地化名.name</code>。</p>
+<p>而格式则是直接在键后加上=, 之后的内容无论是什么都将会是值, 不可包涵换行符或多行编写。<br />
+我们使用 # 作为注解。</p>
+</blockquote>
+<p>我们的物品的本地化键名是 <code>example_item</code>，那么实际就是 <code>item.example_item.name</code>。现在，我们在刚创建的文件分别输入以下内容：</p>
+<div class="highlight"><span class="filename">en_US.lang</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>item.example_item.name=Example Item
+</code></pre></div>
+<div class="highlight"><span class="filename">zh_CN.lang</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>item.example_item.name=示例物品
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">关于语言文件</p>
+<p>当 Minecraft 无法找到适合的语言时, 就会尝试使用 <code>en_US.lang</code>。如果连 <code>en_US.lang</code> 也不存在, 则会直接显示本地化键名。</p>
+</div>
+<h3 id="_5">纹理文件</h3>
+<p>现在, 让我们分配一个材质.我们设定的材质名称是 <code>example_mod_id:example_item</code>, 那么加入 items 文件夹的材质应当命名为 <code>example_item.png</code>. 只需要把他放进去就好, 一切完成!</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>resources
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├── assets
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>│   └── examplemod
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>│       ├── lang
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>│       │   ├── en_US.lang
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>│       │   └── zh_CN.lang
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>│       └── textures
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>│           └── items
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>│               └── example_item.png
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>└── mcmod.info
+</code></pre></div>
+<p>现在就可以看到我们的物品的贴图与名称了！</p>
+<p><img alt="我们第一个物品完成喽！" src="../../assets/item/FirstItem_P1.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -3067,10 +3295,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["header.autohide", "navigation.tabs", "content.code.annotate", "content.code.copy"], "search": "/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.tabs", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

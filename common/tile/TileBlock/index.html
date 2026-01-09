@@ -13,21 +13,25 @@
       
       
       
+        <link rel="prev" href="../../block/RenderBlock/">
       
       
-      <link rel="icon" href="/assets/ricon.png">
+        <link rel="next" href="../WorkingBlock/">
+      
+      
+      <link rel="icon" href="../../../assets/ricon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>NewbModding1710 - Minecraft Mod 1.7.10 开发教学</title>
+        <title>方块与方块实体 - NewbModding1710 - Minecraft Mod 1.7.10 开发教学</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -87,7 +91,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -112,6 +116,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -122,9 +131,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-header__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
+    <a href="../../.." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-header__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
       
-  <img src="/assets/ricon.png" alt="logo">
+  <img src="../../../assets/ricon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -141,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              方块与方块实体
             
           </span>
         </div>
@@ -238,11 +247,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/." class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../.." class="md-tabs__link">
           
   
   
@@ -262,7 +273,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/advanced/" class="md-tabs__link">
+        <a href="../../../advanced/" class="md-tabs__link">
           
   
   
@@ -282,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/togocup/" class="md-tabs__link">
+        <a href="../../../togocup/" class="md-tabs__link">
           
   
   
@@ -316,9 +327,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-nav__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
+    <a href="../../.." title="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" class="md-nav__button md-logo" aria-label="NewbModding1710 - Minecraft Mod 1.7.10 开发教学" data-md-component="logo">
       
-  <img src="/assets/ricon.png" alt="logo">
+  <img src="../../../assets/ricon.png" alt="logo">
 
     </a>
     NewbModding1710 - Minecraft Mod 1.7.10 开发教学
@@ -330,24 +341,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   
@@ -360,7 +376,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             入门开发
@@ -374,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -397,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Core/" class="md-nav__link">
+      <a href="../../../Core/" class="md-nav__link">
         
   
   
@@ -420,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Mod/" class="md-nav__link">
+      <a href="../../../Mod/" class="md-nav__link">
         
   
   
@@ -484,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/FirstItem/" class="md-nav__link">
+      <a href="../../item/FirstItem/" class="md-nav__link">
         
   
   
@@ -507,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/ItemStack/" class="md-nav__link">
+      <a href="../../item/ItemStack/" class="md-nav__link">
         
   
   
@@ -530,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/TagGroup/" class="md-nav__link">
+      <a href="../../item/TagGroup/" class="md-nav__link">
         
   
   
@@ -553,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/ItemFood/" class="md-nav__link">
+      <a href="../../item/ItemFood/" class="md-nav__link">
         
   
   
@@ -576,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/ToolAndWeapon/" class="md-nav__link">
+      <a href="../../item/ToolAndWeapon/" class="md-nav__link">
         
   
   
@@ -599,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/Armors/" class="md-nav__link">
+      <a href="../../item/Armors/" class="md-nav__link">
         
   
   
@@ -622,7 +638,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/Material/" class="md-nav__link">
+      <a href="../../item/Material/" class="md-nav__link">
         
   
   
@@ -645,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/item/MetaItem/" class="md-nav__link">
+      <a href="../../item/MetaItem/" class="md-nav__link">
         
   
   
@@ -717,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/block/FirstBlock/" class="md-nav__link">
+      <a href="../../block/FirstBlock/" class="md-nav__link">
         
   
   
@@ -740,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/block/BlockFacing/" class="md-nav__link">
+      <a href="../../block/BlockFacing/" class="md-nav__link">
         
   
   
@@ -763,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/block/RenderBlock/" class="md-nav__link">
+      <a href="../../block/RenderBlock/" class="md-nav__link">
         
   
   
@@ -791,6 +807,8 @@
                 
   
   
+    
+  
   
   
     
@@ -801,11 +819,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" checked>
         
           
           <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
@@ -821,7 +839,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_6">
             <span class="md-nav__icon md-icon"></span>
             方块实体
@@ -832,10 +850,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/common/tile/TileBlock/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    方块与方块实体
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -846,6 +886,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是方块实体
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建方块实体
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      方块实体的数据存储
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -858,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/tile/WorkingBlock/" class="md-nav__link">
+      <a href="../WorkingBlock/" class="md-nav__link">
         
   
   
@@ -881,7 +968,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/tile/ProxyPacket/" class="md-nav__link">
+      <a href="../ProxyPacket/" class="md-nav__link">
         
   
   
@@ -912,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/ChatComponent/" class="md-nav__link">
+      <a href="../../ChatComponent/" class="md-nav__link">
         
   
   
@@ -976,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/Crafting/" class="md-nav__link">
+      <a href="../../craft/Crafting/" class="md-nav__link">
         
   
   
@@ -999,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/FurnaceCrafting/" class="md-nav__link">
+      <a href="../../craft/FurnaceCrafting/" class="md-nav__link">
         
   
   
@@ -1022,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/BrewingRecipe/" class="md-nav__link">
+      <a href="../../craft/BrewingRecipe/" class="md-nav__link">
         
   
   
@@ -1045,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/craft/OreDict/" class="md-nav__link">
+      <a href="../../craft/OreDict/" class="md-nav__link">
         
   
   
@@ -1076,7 +1163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/DamageType/" class="md-nav__link">
+      <a href="../../DamageType/" class="md-nav__link">
         
   
   
@@ -1099,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/NetWork/" class="md-nav__link">
+      <a href="../../NetWork/" class="md-nav__link">
         
   
   
@@ -1163,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/gui/GUI/" class="md-nav__link">
+      <a href="../../gui/GUI/" class="md-nav__link">
         
   
   
@@ -1186,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/gui/HUD/" class="md-nav__link">
+      <a href="../../gui/HUD/" class="md-nav__link">
         
   
   
@@ -1258,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/event/Event/" class="md-nav__link">
+      <a href="../../event/Event/" class="md-nav__link">
         
   
   
@@ -1281,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/event/InitEvent/" class="md-nav__link">
+      <a href="../../event/InitEvent/" class="md-nav__link">
         
   
   
@@ -1353,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/effect/ID/" class="md-nav__link">
+      <a href="../../effect/ID/" class="md-nav__link">
         
   
   
@@ -1376,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/effect/Effect/" class="md-nav__link">
+      <a href="../../effect/Effect/" class="md-nav__link">
         
   
   
@@ -1407,7 +1494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/Biome.md" class="md-nav__link">
+      <a href="../../Biome.md" class="md-nav__link">
         
   
   
@@ -1471,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/command/ServerCommand/" class="md-nav__link">
+      <a href="../../command/ServerCommand/" class="md-nav__link">
         
   
   
@@ -1494,7 +1581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/common/command/ClientCommand/" class="md-nav__link">
+      <a href="../../command/ClientCommand/" class="md-nav__link">
         
   
   
@@ -1573,7 +1660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/" class="md-nav__link">
+      <a href="../../../advanced/" class="md-nav__link">
         
   
   
@@ -1637,7 +1724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/item/MagicItem.md" class="md-nav__link">
+      <a href="../../../advanced/item/MagicItem.md" class="md-nav__link">
         
   
   
@@ -1660,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/item/NbtItem.md" class="md-nav__link">
+      <a href="../../../advanced/item/NbtItem.md" class="md-nav__link">
         
   
   
@@ -1683,7 +1770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/item/WalletItem.md" class="md-nav__link">
+      <a href="../../../advanced/item/WalletItem.md" class="md-nav__link">
         
   
   
@@ -1755,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/block/BlockItem.md" class="md-nav__link">
+      <a href="../../../advanced/block/BlockItem.md" class="md-nav__link">
         
   
   
@@ -1778,7 +1865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/block/MetaBlock.md" class="md-nav__link">
+      <a href="../../../advanced/block/MetaBlock.md" class="md-nav__link">
         
   
   
@@ -1850,7 +1937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/entity/Entity.md" class="md-nav__link">
+      <a href="../../../advanced/entity/Entity.md" class="md-nav__link">
         
   
   
@@ -1873,7 +1960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/entity/EntityRender.md" class="md-nav__link">
+      <a href="../../../advanced/entity/EntityRender.md" class="md-nav__link">
         
   
   
@@ -1945,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/Tree.md" class="md-nav__link">
+      <a href="../../../advanced/world/Tree.md" class="md-nav__link">
         
   
   
@@ -1968,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/WorldGen.md" class="md-nav__link">
+      <a href="../../../advanced/world/WorldGen.md" class="md-nav__link">
         
   
   
@@ -1991,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/OreGen.md" class="md-nav__link">
+      <a href="../../../advanced/world/OreGen.md" class="md-nav__link">
         
   
   
@@ -2014,7 +2101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/Struction.md" class="md-nav__link">
+      <a href="../../../advanced/world/Struction.md" class="md-nav__link">
         
   
   
@@ -2037,7 +2124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/world/World.md" class="md-nav__link">
+      <a href="../../../advanced/world/World.md" class="md-nav__link">
         
   
   
@@ -2109,7 +2196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/lib/Nei.md" class="md-nav__link">
+      <a href="../../../advanced/lib/Nei.md" class="md-nav__link">
         
   
   
@@ -2132,7 +2219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/lib/Waila.md" class="md-nav__link">
+      <a href="../../../advanced/lib/Waila.md" class="md-nav__link">
         
   
   
@@ -2155,7 +2242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/lib/GeoModel.md" class="md-nav__link">
+      <a href="../../../advanced/lib/GeoModel.md" class="md-nav__link">
         
   
   
@@ -2227,7 +2314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/obj/TileRenderer.md" class="md-nav__link">
+      <a href="../../../advanced/obj/TileRenderer.md" class="md-nav__link">
         
   
   
@@ -2250,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/obj/ObjRender.md" class="md-nav__link">
+      <a href="../../../advanced/obj/ObjRender.md" class="md-nav__link">
         
   
   
@@ -2273,7 +2360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/obj/ItemObj.md" class="md-nav__link">
+      <a href="../../../advanced/obj/ItemObj.md" class="md-nav__link">
         
   
   
@@ -2386,7 +2473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mixin/Inject.md" class="md-nav__link">
+      <a href="../../../advanced/mixin/Inject.md" class="md-nav__link">
         
   
   
@@ -2409,7 +2496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mixin/Access.md" class="md-nav__link">
+      <a href="../../../advanced/mixin/Access.md" class="md-nav__link">
         
   
   
@@ -2432,7 +2519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/mixin/Unique.md" class="md-nav__link">
+      <a href="../../../advanced/mixin/Unique.md" class="md-nav__link">
         
   
   
@@ -2504,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/asm/ASM.md" class="md-nav__link">
+      <a href="../../../advanced/asm/ASM.md" class="md-nav__link">
         
   
   
@@ -2527,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/advanced/asm/patch.md" class="md-nav__link">
+      <a href="../../../advanced/asm/patch.md" class="md-nav__link">
         
   
   
@@ -2614,7 +2701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/" class="md-nav__link">
+      <a href="../../../togocup/" class="md-nav__link">
         
   
   
@@ -2678,7 +2765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/ppc/Config.md" class="md-nav__link">
+      <a href="../../../togocup/ppc/Config.md" class="md-nav__link">
         
   
   
@@ -2701,7 +2788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/ppc/MatchUtil.md" class="md-nav__link">
+      <a href="../../../togocup/ppc/MatchUtil.md" class="md-nav__link">
         
   
   
@@ -2724,7 +2811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/ppc/SimpleInventory.md" class="md-nav__link">
+      <a href="../../../togocup/ppc/SimpleInventory.md" class="md-nav__link">
         
   
   
@@ -2796,7 +2883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/tags/AddTags.md" class="md-nav__link">
+      <a href="../../../togocup/tags/AddTags.md" class="md-nav__link">
         
   
   
@@ -2819,7 +2906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/tags/UsingTags.md" class="md-nav__link">
+      <a href="../../../togocup/tags/UsingTags.md" class="md-nav__link">
         
   
   
@@ -2842,7 +2929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/tags/OreDict.md" class="md-nav__link">
+      <a href="../../../togocup/tags/OreDict.md" class="md-nav__link">
         
   
   
@@ -2914,7 +3001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/wui/Toast.md" class="md-nav__link">
+      <a href="../../../togocup/wui/Toast.md" class="md-nav__link">
         
   
   
@@ -2937,7 +3024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/wui/Style.md" class="md-nav__link">
+      <a href="../../../togocup/wui/Style.md" class="md-nav__link">
         
   
   
@@ -2960,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/togocup/wui/UI.md" class="md-nav__link">
+      <a href="../../../togocup/wui/UI.md" class="md-nav__link">
         
   
   
@@ -3008,6 +3095,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是方块实体
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建方块实体
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      方块实体的数据存储
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3019,8 +3143,168 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="_1">方块与方块实体</h1>
+<p>过去的章节中我们学习了如何创建方块，这一章我们将要学习如何为方块搭配一个方块实体。</p>
+<p><a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/tile/TileExample.java"><strong>章节相关源码: 创建方块实体</strong></a><br />
+<a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/common/block/BlockExampleWithTile.java"><strong>章节相关源码: 创建方块</strong></a><br />
+<a href="https://github.com/AmarokIce/NewbModding1710/blob/ModDev/src/main/java/club/snowlyicewolf/modding1710/init/InitBlocks.java"><strong>章节相关源码: 注册</strong></a></p>
+<h2 id="_2">什么是方块实体</h2>
+<p>通常来讲我们的方块不存储任何数据，由于 1.7.10 甚至没有 <code>BlockState</code> 的概念，数据存储自然是无望直接挂载到 <code>Block</code> 中。<br />
+但对于任何需要存储数据的，例如箱子，或者熔炉，那么我们就需要方块实体。<br />
+方块实体除了能够存储数据，也能够可选性的登记每个 <code>tick</code> 将要处理的事物，以及提供特殊的渲染工具。</p>
+<blockquote>
+<p>关于特殊渲染，相关内容将会在进阶开发中提及。</p>
+</blockquote>
+<div class="admonition failure">
+<p class="admonition-title">以防读者不知道，工作台从来都不是方块实体。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">或许在更高的版本中接触到的是 <code>BlockEntity</code>，但是请注意，现在我们依然叫 <code>TileEntity</code>。当与其他人聊起方块实体的时候，或许读者应该称其为 <code>Tile</code> 而不是 <code>BlockEntity。</code></p>
+</div>
+<h2 id="_3">创建方块实体</h2>
+<p>虽然在 1.7.10 中，<code>world</code> 参数与 <code>meta</code> 参数不是必要的，通常情况下 Minecraft 会自动填充它们。但是，规范一些总是没错不是吗？</p>
+<div class="highlight"><span class="filename">TileExample.java</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TileExample</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">TileEntity</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">TileExample</span><span class="p">(</span><span class="n">World</span><span class="w"> </span><span class="n">world</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">meta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setWorldObj</span><span class="p">(</span><span class="n">world</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">blockMetadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">meta</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</code></pre></div>
+<p>然后我们需要在目标的方块中绑定它。首先我们需要继承 <code>BlockContainer</code> 或者实现接口 <code>ITileEntityProvider</code>：</p>
+<div class="highlight"><span class="filename">BlockExampleWithTile.java</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">BlockExampleWithTile</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">BlockContainer</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">BlockExampleWithTile</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">Material</span><span class="p">.</span><span class="na">rock</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;example_tile_block&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setBlockName</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setBlockTextureName</span><span class="p">(</span><span class="n">ModMain</span><span class="p">.</span><span class="na">ID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setCreativeTab</span><span class="p">(</span><span class="n">ModMain</span><span class="p">.</span><span class="na">TAB</span><span class="p">);</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="n">InitBlocks</span><span class="p">.</span><span class="na">registerBlock</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">TileEntity</span><span class="w"> </span><span class="nf">createNewTileEntity</span><span class="p">(</span><span class="n">World</span><span class="w"> </span><span class="n">pWorld</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pMeta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TileExample</span><span class="p">(</span><span class="n">pWorld</span><span class="p">,</span><span class="w"> </span><span class="n">pMeta</span><span class="p">);</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span>
+</code></pre></div>
+<p>最后，我们只需要注册它们即可：</p>
+<div class="highlight"><span class="filename">InitBlocks.java</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// 注册全部方块。</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">BLOCKS</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">GameRegistry</span><span class="p">::</span><span class="n">registerBlock</span><span class="p">);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">initTileEntity</span><span class="p">();</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initTileEntity</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">GameRegistry</span><span class="p">.</span><span class="na">registerTileEntity</span><span class="p">(</span><span class="n">TileExample</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;example_tile&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="_4">方块实体的数据存储</h2>
+<p>总之，我们已经完成了一个方块实体的创建，但是现在它看起来还没有任何存储数据的能力——顶多就是一个特殊渲染的载体。<br />
+所以，现在我们需要为它提供一个计数能力。那么，先请读者思考一下，如果我们需要做一个计数，需要先做什么？<br />
+当然，创建一个变量！先在我们刚才创建的 <code>TileEntity</code> 中创建这这个变量，然后再来考虑一下别的事情。<br />
+我是说，我们还需要存储这样的变量不是吗？否则在我们推出游戏，变量就消失了。</p>
+<div class="highlight"><span class="filename">TileExample.java</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">TileExample</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">TileEntity</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">TileExample</span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="n">World</span><span class="w"> </span><span class="n">world</span><span class="p">,</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">meta</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">setWorldObj</span><span class="p">(</span><span class="n">world</span><span class="p">);</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">blockMetadata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">meta</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">modifyCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="c1">// 为了不让 count 小于 0，我们需要限制底线。</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="p">}</span>
+</code></pre></div>
+<p>现在，我们得到了一个雏形，这样就已经可以开始写下一步实现了。不过先等等，就像是刚才提到的，如果我们推出游戏，数据就消失了。我们先来编写一个数据存储：</p>
+<div class="highlight"><span class="filename">TileExample.java</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// 这里用于存储数据</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nd">@Override</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">writeToNBT</span><span class="p">(</span><span class="n">NBTTagCompound</span><span class="w"> </span><span class="n">nbt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">writeToNBT</span><span class="p">(</span><span class="n">nbt</span><span class="p">);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">nbt</span><span class="p">.</span><span class="na">setInteger</span><span class="p">(</span><span class="s">&quot;count&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">);</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1">// 这里用于读取数据</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nd">@Override</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">readFromNBT</span><span class="p">(</span><span class="n">NBTTagCompound</span><span class="w"> </span><span class="n">nbt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="kd">super</span><span class="p">.</span><span class="na">readFromNBT</span><span class="p">(</span><span class="n">nbt</span><span class="p">);</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nbt</span><span class="p">.</span><span class="na">getInteger</span><span class="p">(</span><span class="s">&quot;count&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">}</span>
+</code></pre></div>
+<p>好了！现在我们开始编写方块部分于这个方块实体交互：</p>
+<div class="highlight"><span class="filename">BlockExampleWithTile.java</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="c1">// 这里用于处理玩家右键方块时将要做的。</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nd">@Override</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">onBlockActivated</span><span class="p">(</span><span class="n">World</span><span class="w"> </span><span class="n">pWorld</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pPosX</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pPosY</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pPosZ</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">                                </span><span class="n">EntityPlayer</span><span class="w"> </span><span class="n">pUser</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pFace</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">pHitX</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">                                </span><span class="kt">float</span><span class="w"> </span><span class="n">pHitY</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">pHitZ</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="c1">// 检查是否为服务端。当 isRemote 为 True 时为客户端，因此提前返回。</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pWorld</span><span class="p">.</span><span class="na">isRemote</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="c1">// 检查 TileEntity 是否为我们需要的，为了避免任何意外。每次采取 TileEntity 时都应该注意检查。</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">TileEntity</span><span class="w"> </span><span class="n">tileEntity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pWorld</span><span class="p">.</span><span class="na">getTileEntity</span><span class="p">(</span><span class="n">pPosX</span><span class="p">,</span><span class="w"> </span><span class="n">pPosY</span><span class="p">,</span><span class="w"> </span><span class="n">pPosZ</span><span class="p">);</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">tileEntity</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">TileExample</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="c1">// 投射过去。</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">TileExample</span><span class="w"> </span><span class="n">tile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">TileExample</span><span class="p">)</span><span class="w"> </span><span class="n">tileEntity</span><span class="p">;</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span><span class="n">tile</span><span class="p">.</span><span class="na">addCount</span><span class="p">();</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">    </span><span class="c1">// 输出我们的消息</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="w">    </span><span class="n">pUser</span><span class="p">.</span><span class="na">addChatMessage</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ChatComponentText</span><span class="p">(</span><span class="n">tile</span><span class="p">.</span><span class="na">getCount</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">));</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="p">}</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="c1">// 这里用于处理玩家左键方块时将要做的。</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="nd">@Override</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onBlockClicked</span><span class="p">(</span><span class="n">World</span><span class="w"> </span><span class="n">pWorld</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pPosX</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pPosY</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">pPosZ</span><span class="p">,</span><span class="w"> </span><span class="n">EntityPlayer</span><span class="w"> </span><span class="n">pUser</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pWorld</span><span class="p">.</span><span class="na">isRemote</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">TileEntity</span><span class="w"> </span><span class="n">tileEntity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pWorld</span><span class="p">.</span><span class="na">getTileEntity</span><span class="p">(</span><span class="n">pPosX</span><span class="p">,</span><span class="w"> </span><span class="n">pPosY</span><span class="p">,</span><span class="w"> </span><span class="n">pPosZ</span><span class="p">);</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">tileEntity</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">TileExample</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">TileExample</span><span class="w"> </span><span class="n">tile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">TileExample</span><span class="p">)</span><span class="w"> </span><span class="n">tileEntity</span><span class="p">;</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="w">    </span><span class="n">tile</span><span class="p">.</span><span class="na">modifyCount</span><span class="p">();</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="w">    </span><span class="n">pUser</span><span class="p">.</span><span class="na">addChatMessage</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ChatComponentText</span><span class="p">(</span><span class="n">tile</span><span class="p">.</span><span class="na">getCount</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">));</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="p">}</span>
+</code></pre></div>
+<p>非常简单！不是吗？</p>
+<p><img alt="" src="../../assets/tile/TileEntity_P0.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -3067,10 +3351,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["header.autohide", "navigation.tabs", "content.code.annotate", "content.code.copy"], "search": "/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.tabs", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>
