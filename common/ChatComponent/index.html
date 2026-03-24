@@ -937,6 +937,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    文本组件
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -948,6 +961,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chatcomponenttext" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChatComponentText
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatcomponenttranslation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChatComponentTranslation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      I18N
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3037,6 +3096,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chatcomponenttext" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChatComponentText
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chatcomponenttranslation" class="md-nav__link">
+    <span class="md-ellipsis">
+      ChatComponentTranslation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i18n" class="md-nav__link">
+    <span class="md-ellipsis">
+      I18N
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3052,7 +3146,23 @@
 
 
 <h1 id="_1">文本组件</h1>
-<p>还没开始做 :(</p>
+<p>在物品和方块中，我们已经了解且实战过使用本地化文本了。没有印象了吗？好吧，因为我们使用的内容被称之为 <code>Unlocalized 文本（未本地化文本）</code>。显然，这些文本不会自己神奇的变成 <code>lang</code> 文件中的文本。</p>
+<p>我们有三种方式处理文本：<code>ChatComponentTranslation</code>，<code>ChatComponentText</code>，<code>I18N</code>。</p>
+<h2 id="chatcomponenttext">ChatComponentText</h2>
+<p><code>ChatComponentText</code> 负责提供原样的文本，也就是我们常说的 “硬编码”。<code>ChatComponentText</code> 无论使用何种方式或格式化输出，都只有原文。</p>
+<p><code>ChatComponentText</code> 无法使用格式化文本占位符，但是因为实现了 <code>IChatComponent</code>，<code>ChatComponentText</code> 可以使用 <code>append</code> 类型的方法，追加额外的文本。</p>
+<p><code>appendText</code> 将会追加一个硬编码文本，而 <code>appendSibling</code> 可以提供另一个实现了 <code>IChatComponent</code> 的对象。任何 <code>IChatComponent</code> 都可以设置文本格式。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">new</span><span class="w"> </span><span class="n">ChatComponentText</span><span class="p">(</span><span class="s">&quot;Hello world! I&#39;m ChatComponentText!&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;Hello world! I&#39;m ChatComponentText!&quot;</span>
+</code></pre></div>
+<h2 id="chatcomponenttranslation">ChatComponentTranslation</h2>
+<p><code>ChatComponentTranslation</code> 将会提供 <code>lang</code> 翻译后的文本，并且可以使用文本占位符。与 <code>ChatComponentText</code> 一样，实现了 <code>IChatComponent</code>。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>message.oneofname.mymodid=Hello world! I&#39;m %s!
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">new</span><span class="w"> </span><span class="n">ChatComponentTranslation</span><span class="p">(</span><span class="s">&quot;message.oneofname.mymodid&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ChatComponentTranslation&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;Hello world! I&#39;m ChatComponentTranslation!&quot;</span>
+</code></pre></div>
+<h2 id="i18n">I18N</h2>
+<p>当然，I18N 是一个缩写，全称是 <code>Internationalization (国际化)</code>。<code>I18n</code> 类内的方法 <code>format</code> 将会尝试格式化后提供翻译后的文本，这与 <code>ChatComponentTranslation</code> 中使用 <code>getFormattedText</code> 得到的结果是相同的。</p>
+<p>I18N 不是很常用，通常推荐使用 <code>ChatComponentTranslation</code> 避免不必要的麻烦。但对于那些小型辅助性的模组，创建一个额外对象是不必要的，那么使用 I18N 获取文本结果是很好的方式。</p>
 
 
 
